@@ -1,0 +1,2489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Hola Mundo | Online Spanish Academy for Kids & Teens (Ages 8-17)</title>
+  <meta name="description" content="Live online Spanish classes for kids and teens ages 8-17. Learn Spanish through adventures, stories, and real conversations with native Latin American teachers. Book a free trial class!">
+  <meta name="keywords" content="online Spanish classes for kids, Spanish classes for teens, Spanish for kids online, online Spanish lessons for children, Spanish for bilingual kids, heritage Spanish classes for kids">
+  <meta name="author" content="Hola Mundo Academy">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Social Media Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://holamundo.academy/">
+  <meta property="og:title" content="Hola Mundo | Online Spanish Academy for Kids & Teens">
+  <meta property="og:description" content="Spanish becomes an adventure. Live online Spanish classes where kids and teens explore, speak, play and discover the Spanish-speaking world.">
+
+  <!-- Fonts (Google Fonts: Fredoka Display, Outfit, Plus Jakarta Sans & Caveat Script) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@500;600;700&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Structured Data / Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Hola Mundo",
+    "description": "Online Spanish Academy for Kids & Teens (Ages 8-17)",
+    "url": "https://holamundo.academy",
+    "areaServed": "Worldwide",
+    "educationalCredentialAwarded": "Certificate of Spanish Progress"
+  }
+  </script>
+
+  <!-- ==========================================
+       DEFINITIVE VISUAL STYLESHEET
+       ========================================== -->
+  <style>
+    /* DESIGN TOKENS - NAVY, SUN YELLOW, TEAL & SOFT CREAM */
+    :root {
+      --bg-main: #FAF9F6;            /* Soft Linen Cream Background */
+      --bg-surface: #FFFFFF;         /* Crisp White Surface */
+      --bg-subtle: #F0F4F8;          /* Soft Ice Blue/Subtle Wash */
+      --bg-dark: #0F172A;            /* Deep Slate Dark Neutral */
+
+      --text-main: #0F172A;          /* Deep Navy Ink */
+      --text-muted: #334155;         /* Body Text Slate */
+      --text-subtle: #64748B;        /* Muted Label Slate */
+      --text-light: #F8FAFC;         /* Light Text */
+
+      --navy-primary: #1E3A8A;       /* Deep Navy Blue Header & Brand */
+      --navy-dark: #0F172A;          /* Deep Ink Navy */
+      --navy-light: #EFF6FF;         /* Soft Navy Wash */
+
+      --yellow-sun: #F59E0B;         /* Vibrant Warm Sun Yellow for CTAs */
+      --yellow-sun-hover: #D97706;   /* Darker Sun Yellow */
+      --yellow-bright: #FBBF24;      /* Bright Accent Yellow */
+      --yellow-wash: #FEF3C7;
+
+      --teal-secondary: #0D9488;     /* Seafoam Teal Accent */
+      --teal-wash: #E6FFFA;
+      --teal-border: #99F6E4;
+
+      --border-light: #E2E8F0;
+      --border-hairline: #CBD5E1;
+
+      --font-heading: 'Fredoka', 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-script: 'Caveat', cursive;
+
+      --max-width: 1220px;
+      --header-height: 84px;
+
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+
+      --transition-smooth: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* TYPOGRAPHY */
+    h1, h2, h3, .font-heading {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: var(--navy-dark);
+      line-height: 1.25;
+    }
+
+    .font-script {
+      font-family: var(--font-script);
+      color: var(--yellow-sun-hover);
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+
+    p {
+      color: var(--text-muted);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section {
+      padding: 5.5rem 0;
+      position: relative;
+    }
+
+    .section-border-top {
+      border-top: 1px solid var(--border-light);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 3.5rem auto;
+    }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem 0.9rem;
+      border-radius: var(--radius-full);
+      background-color: var(--yellow-wash);
+      color: #92400E;
+      font-weight: 800;
+      font-size: 0.825rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      border: 1px solid #FDE68A;
+    }
+
+    .section-title {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .section-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.9rem 1.85rem;
+      border-radius: var(--radius-full);
+      font-weight: 800;
+      font-size: 1rem;
+      transition: var(--transition-smooth);
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .btn-yellow {
+      background-color: var(--yellow-sun);
+      color: var(--navy-dark);
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+    }
+
+    .btn-yellow:hover {
+      background-color: var(--yellow-sun-hover);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(217, 119, 6, 0.4);
+    }
+
+    .btn-navy {
+      background-color: var(--navy-primary);
+      color: white;
+      box-shadow: 0 4px 14px rgba(30, 58, 138, 0.25);
+    }
+
+    .btn-navy:hover {
+      background-color: var(--navy-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background-color: var(--bg-surface);
+      color: var(--navy-dark);
+      border: 2px solid var(--border-light);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--navy-light);
+      border-color: var(--navy-primary);
+    }
+
+    .btn-sm {
+      padding: 0.5rem 1.25rem;
+      font-size: 0.875rem;
+    }
+
+    .btn-lg {
+      padding: 1.1rem 2.25rem;
+      font-size: 1.05rem;
+    }
+
+    .btn-full {
+      width: 100%;
+    }
+
+    .btn:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    /* HEADER & NAVIGATION */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--header-height);
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      transition: var(--transition-smooth);
+    }
+
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-logo-main {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: var(--navy-primary);
+      line-height: 1;
+    }
+
+    .brand-logo-spark {
+      color: var(--yellow-sun);
+    }
+
+    .brand-logo-sub {
+      font-size: 0.725rem;
+      font-weight: 700;
+      color: var(--text-subtle);
+      letter-spacing: 0.03em;
+      margin-top: 2px;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 2.25rem;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      transition: var(--transition-smooth);
+    }
+
+    .nav-link:hover {
+      color: var(--navy-primary);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-full);
+      padding: 3px;
+    }
+
+    .lang-btn {
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--text-subtle);
+      transition: var(--transition-smooth);
+    }
+
+    .lang-btn.active {
+      background: var(--navy-primary);
+      color: white;
+    }
+
+    .mobile-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      width: 28px;
+      height: 22px;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .mobile-toggle span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background: var(--navy-dark);
+      border-radius: 3px;
+    }
+
+    /* HERO SECTION - YOUNG TEACHER ONLINE DIGITAL CLASS HERO */
+    .hero {
+      padding-top: calc(var(--header-height) + 3.5rem);
+      padding-bottom: 5.5rem;
+      background: linear-gradient(180deg, #F0F4F8 0%, var(--bg-main) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 800;
+      color: var(--navy-primary);
+      margin-bottom: 1.25rem;
+      background: white;
+      padding: 0.4rem 1rem;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-light);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .hero-title {
+      font-size: 3.4rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+
+    .hero-title-highlight {
+      position: relative;
+      color: var(--navy-primary);
+      display: inline-block;
+    }
+
+    .hero-title-highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      right: 0;
+      height: 12px;
+      background: var(--yellow-bright);
+      opacity: 0.6;
+      z-index: -1;
+      border-radius: 4px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-bottom: 2.25rem;
+      line-height: 1.65;
+      max-width: 560px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-attributes {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .hero-attr-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .hero-attr-item svg {
+      color: var(--teal-secondary);
+      flex-shrink: 0;
+    }
+
+    /* DIGITAL INTERACTIVE REALISTIC PHOTO FRAME */
+    .hero-photo-wrapper {
+      position: relative;
+    }
+
+    .hero-photo-frame {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 25px 50px rgba(15, 23, 42, 0.16);
+      border: 6px solid white;
+      background: white;
+      position: relative;
+    }
+
+    .hero-photo-frame img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      object-position: center 15%;
+    }
+
+    /* DIGITAL LIVE LESSON INTERACTIVE BADGES */
+    .digital-live-badge {
+      position: absolute;
+      top: 1.25rem;
+      left: 1.25rem;
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(8px);
+      color: white;
+      padding: 0.4rem 0.95rem;
+      border-radius: var(--radius-full);
+      font-size: 0.775rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .digital-live-dot {
+      width: 8px;
+      height: 8px;
+      background: #22C55E;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #22C55E;
+    }
+
+    .digital-reaction-badge {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: white;
+      padding: 0.4rem 0.85rem;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--navy-dark);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .hero-floating-badge {
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 1.15rem 1.35rem;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+      border: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      max-width: 330px;
+    }
+
+    /* TRUST STRIP */
+    .trust-bar {
+      background: white;
+      border-y: 1px solid var(--border-light);
+      padding: 2.25rem 0;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+
+    .trust-card-clean {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .trust-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: var(--navy-light);
+      color: var(--navy-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .trust-card-text {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--navy-dark);
+    }
+
+    /* SECTION: OUR APPROACH ("Classes kids look forward to") */
+    .approach-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .approach-photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      position: relative;
+    }
+
+    .approach-photo-item {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      border: 4px solid white;
+    }
+
+    .approach-photo-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .approach-bullet-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1.75rem 0 2rem 0;
+    }
+
+    .approach-bullet-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .approach-bullet-item svg {
+      color: var(--teal-secondary);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    /* SECTION: A CLASS AT HOLA MUNDO ("This is what learning looks like") */
+    .class-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.25rem;
+    }
+
+    .class-step-card {
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 1.75rem 1.25rem;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      position: relative;
+      transition: var(--transition-smooth);
+    }
+
+    .class-step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      border-color: var(--navy-primary);
+    }
+
+    .class-step-num {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--yellow-sun);
+      margin-bottom: 0.5rem;
+    }
+
+    .class-step-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .class-step-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* AGE PROGRAM CARDS WITH REALISTIC PHOTOGRAPHY */
+    .age-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .age-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition-smooth);
+    }
+
+    .age-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    }
+
+    .age-card-img {
+      height: 240px;
+      overflow: hidden;
+      position: relative;
+      background: var(--bg-subtle);
+    }
+
+    .age-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+    }
+
+    .age-badge-pill {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--navy-primary);
+      color: white;
+      font-weight: 800;
+      font-size: 0.8rem;
+      padding: 0.3rem 0.85rem;
+      border-radius: var(--radius-full);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .age-card-body {
+      padding: 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .age-card-title {
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .age-card-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      flex: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    /* LEARNING PATHS SPLIT */
+    .paths-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .path-card-large {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 3rem 2.5rem;
+      border: 2px solid var(--border-light);
+    }
+
+    .path-card-large.featured {
+      border-color: var(--yellow-sun);
+      box-shadow: 0 10px 30px rgba(245, 158, 11, 0.12);
+    }
+
+    /* ILLUSTRATIVE MISSIONS */
+    .missions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .mission-card {
+      background: white;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .mission-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+      border-color: var(--navy-primary);
+    }
+
+    .mission-img-box {
+      height: 160px;
+      position: relative;
+    }
+
+    .mission-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .mission-body {
+      padding: 1.5rem;
+    }
+
+    /* LATIN AMERICA CULTURAL BANNER */
+    .culture-strip {
+      background: linear-gradient(135deg, var(--navy-primary), var(--navy-dark));
+      color: white;
+      padding: 3rem 0;
+    }
+
+    /* PARENT PROGRESS SECTION */
+    .parent-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .report-paper {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border: 1px solid var(--border-light);
+    }
+
+    .metric-bar-bg {
+      height: 8px;
+      border-radius: 4px;
+      background: var(--bg-subtle);
+      overflow: hidden;
+    }
+
+    .metric-bar-fill {
+      height: 100%;
+      background: var(--navy-primary);
+      border-radius: 4px;
+    }
+
+    /* LEAD CTA SECTION */
+    .lead-banner {
+      background: var(--navy-dark);
+      color: white;
+      border-radius: var(--radius-lg);
+      padding: 4rem 3rem;
+    }
+
+    .lead-banner-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .form-paper {
+      background: white;
+      color: var(--text-main);
+      border-radius: var(--radius-md);
+      padding: 2.25rem;
+    }
+
+    /* FORM CONTROLS */
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .form-label {
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: var(--navy-dark);
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-light);
+      background: var(--bg-main);
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      outline: none;
+      transition: var(--transition-smooth);
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--navy-primary);
+      background: white;
+      box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.12);
+    }
+
+    .form-checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .form-checkbox {
+      width: 18px;
+      height: 18px;
+      margin-top: 3px;
+      accent-color: var(--navy-primary);
+    }
+
+    /* FAQ ACCORDION */
+    .faq-list {
+      max-width: 840px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+      overflow: hidden;
+    }
+
+    .faq-button {
+      width: 100%;
+      padding: 1.35rem 1.5rem;
+      text-align: left;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      color: var(--navy-dark);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 300ms ease;
+      padding: 0 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .faq-item.active .faq-answer {
+      padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--navy-dark);
+      color: #94A3B8;
+      padding: 4.5rem 0 2.5rem 0;
+      font-size: 0.9rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr repeat(3, 1fr);
+      gap: 3rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #334155;
+      padding-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.825rem;
+    }
+
+    /* MODAL POPUPS */
+    .modal-backdrop {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(6px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition-smooth);
+    }
+
+    .modal-backdrop.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-paper {
+      background: white;
+      border-radius: var(--radius-lg);
+      max-width: 580px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 2.25rem;
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-full);
+      background: var(--bg-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+    }
+
+    /* COOKIE BANNER */
+    .cookie-banner {
+      position: fixed;
+      bottom: 1.5rem; left: 1.5rem; right: 1.5rem;
+      max-width: 480px;
+      background: var(--navy-dark);
+      color: white;
+      border-radius: var(--radius-md);
+      padding: 1.35rem;
+      z-index: 1500;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      transform: translateY(180%);
+      transition: var(--transition-smooth);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .cookie-banner.active {
+      transform: translateY(0);
+    }
+
+    /* MOBILE STICKY CTA */
+    .mobile-sticky-bar {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 0.75rem 1.25rem;
+      border-top: 1px solid var(--border-light);
+      z-index: 900;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* RESPONSIVE LAYOUT BREAKPOINTS */
+    @media (max-width: 1024px) {
+      .hero-grid, .approach-grid, .lead-banner-grid, .parent-grid, .paths-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .class-steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .age-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-title {
+        font-size: 2.75rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed;
+        top: var(--header-height);
+        left: 0; right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 2rem;
+        border-bottom: 1px solid var(--border-light);
+        transform: translateY(-120%);
+        transition: var(--transition-smooth);
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .mobile-toggle {
+        display: flex;
+      }
+
+      .class-steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .mobile-sticky-bar {
+        display: flex;
+      }
+
+      .hero-title {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Hola Mundo Home">
+        <div class="brand-logo-main">
+          Hola<span>Mundo</span><span class="brand-logo-spark">✦</span>
+        </div>
+        <div class="brand-logo-sub">Spanish Academy for Kids & Teens</div>
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#how-it-works" class="nav-link" data-i18n="nav_how_it_works">How it works</a></li>
+          <li><a href="#programs" class="nav-link" data-i18n="nav_programs">Programs</a></li>
+          <li><a href="#our-approach" class="nav-link" data-i18n="nav_our_approach">Our approach</a></li>
+          <li><a href="#for-parents" class="nav-link" data-i18n="nav_for_parents">For parents</a></li>
+          <li><a href="#faq" class="nav-link" data-i18n="nav_faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Language Switcher -->
+        <div class="lang-switcher" aria-label="Language Switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+        </div>
+
+        <!-- Primary CTA Button -->
+        <button class="btn btn-yellow btn-sm" onclick="HOLA_APP.openTrialModal()" data-i18n="nav_book_trial">
+          Book a Free Trial
+        </button>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION - YOUNG NATIVE SPANISH TEACHER ONLINE CLASS HERO -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Left: Copy & CTAs -->
+        <div>
+          <div class="hero-badge" data-i18n="hero_badge">
+            ✨ Online Spanish Academy for Kids & Teens
+          </div>
+
+          <h1 class="hero-title">
+            <span data-i18n="hero_title_1">Spanish becomes an </span>
+            <span class="hero-title-highlight" data-i18n="hero_title_2">adventure.</span>
+          </h1>
+
+          <p class="hero-subtitle" data-i18n="hero_subtitle">
+            Live online Spanish classes for kids and teens ages 8–17. Small groups, native teachers and real conversations.
+          </p>
+
+          <div class="hero-ctas">
+            <button class="btn btn-yellow btn-lg" onclick="HOLA_APP.openTrialModal()" data-i18n="hero_cta_primary">
+              Book a Free Trial
+            </button>
+            <a href="#how-it-works" class="btn btn-secondary btn-lg" data-i18n="hero_cta_secondary">
+              Discover Hola Mundo
+            </a>
+          </div>
+
+          <!-- Hero Attribute Highlights -->
+          <div class="hero-attributes">
+            <div class="hero-attr-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="hero_trust_live">Live online classes</span>
+            </div>
+            <div class="hero-attr-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="hero_trust_groups">Small groups</span>
+            </div>
+            <div class="hero-attr-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="hero_trust_native">Native teachers from Latin America</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Young Native Spanish Teacher Digital Online Class Photo -->
+        <div class="hero-photo-wrapper">
+          <div class="hero-photo-frame">
+            <!-- Authentic Unsplash Photo: Young, warm, professional Latin American teacher smiling during a live digital Spanish session on laptop -->
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80" alt="Young Latin American teacher conducting a live online Spanish class" width="600" height="460" />
+
+            <!-- Interactive Digital Live Session Overlays -->
+            <div class="digital-live-badge">
+              <span class="digital-live-dot"></span>
+              <span>LIVE SPANISH SESSION • 🟢 EN VIVO</span>
+            </div>
+
+            <div class="digital-reaction-badge">
+              <span>¡Hola chicos! 👋</span>
+            </div>
+          </div>
+
+          <div class="hero-floating-badge">
+            <div style="width:42px;height:42px;border-radius:12px;background:var(--yellow-wash);color:var(--yellow-sun-hover);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">
+              🎓
+            </div>
+            <div style="font-size:0.875rem;font-weight:700;color:var(--navy-dark);line-height:1.35;" data-i18n="hero_floating_badge_text">
+              Native Spanish teachers connecting kids to real conversations worldwide.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-card-clean">
+          <div class="trust-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <span class="trust-card-text" data-i18n="trust_live_title">100% Live & Interactive</span>
+        </div>
+
+        <div class="trust-card-clean">
+          <div class="trust-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <span class="trust-card-text" data-i18n="trust_groups_title">Small Groups</span>
+        </div>
+
+        <div class="trust-card-clean">
+          <div class="trust-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <span class="trust-card-text" data-i18n="trust_teachers_title">Latin American Teachers</span>
+        </div>
+
+        <div class="trust-card-clean">
+          <div class="trust-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <span class="trust-card-text" data-i18n="trust_reports_title">Progress Reports</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: OUR APPROACH ("Classes kids look forward to") -->
+  <section class="section section-border-top" id="our-approach">
+    <div class="container">
+      <div class="approach-grid">
+        <!-- Left: Lifestyle Photo Collage -->
+        <div class="approach-photos">
+          <div class="approach-photo-item">
+            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80" alt="Kid raising hand happily during online class" />
+          </div>
+          <div class="approach-photo-item" style="margin-top:2rem;">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="Student smiling while talking to teacher on laptop" />
+          </div>
+        </div>
+
+        <!-- Right: Editorial Content -->
+        <div>
+          <span class="section-tag" data-i18n="approach_tag">OUR APPROACH</span>
+          <h2 class="section-title" data-i18n="approach_title">Classes kids look forward to.</h2>
+          <p class="section-subtitle" data-i18n="approach_desc">
+            We turn every class into an experience. Through missions, games, stories and real conversation, students learn Spanish in a natural, meaningful and fun way.
+          </p>
+
+          <ul class="approach-bullet-list">
+            <li class="approach-bullet-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="approach_bullet1">Live, small-group classes</span>
+            </li>
+            <li class="approach-bullet-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="approach_bullet2">Native Spanish-speaking teachers from Latin America</span>
+            </li>
+            <li class="approach-bullet-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="approach_bullet3">Communicative and interactive methodology</span>
+            </li>
+            <li class="approach-bullet-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="approach_bullet4">Adventures and real-world topics</span>
+            </li>
+            <li class="approach-bullet-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="approach_bullet5">Progress reports for families</span>
+            </li>
+          </ul>
+
+          <div class="font-script" data-i18n="approach_quote">
+            "More than a class, it's an experience."
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: A CLASS AT HOLA MUNDO ("This is what learning looks like") -->
+  <section class="section section-border-top" id="how-it-works" style="background:var(--bg-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="how_tag">A CLASS AT HOLA MUNDO</span>
+        <h2 class="section-title" data-i18n="how_title">This is what learning looks like</h2>
+        <p class="section-subtitle" data-i18n="how_subtitle">
+          A clear 5-step interactive process designed to make every lesson dynamic, active, and conversational.
+        </p>
+      </div>
+
+      <div class="class-steps-grid" id="howItWorksStepsGrid">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+
+      <!-- Illustrative Missions -->
+      <div style="margin-top:4rem;padding-top:3rem;border-top:1px solid var(--border-light);">
+        <div style="margin-bottom:2rem;">
+          <h3 style="font-size:1.6rem;margin-bottom:0.35rem;">Sample Adventure Missions</h3>
+          <p style="font-size:0.875rem;color:var(--text-subtle);" data-i18n="method_illustrative_note">
+            * The missions shown below are illustrative adventure examples showcasing our gamified learning approach.
+          </p>
+        </div>
+
+        <div class="missions-grid" id="missionsGrid">
+          <!-- Rendered dynamically via JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGE PROGRAMS WITH AUTHENTIC PERFECTLY CENTERED PHOTOGRAPHY -->
+  <section class="section section-border-top" id="programs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="programs_tag">AGE SEGMENTATION</span>
+        <h2 class="section-title" data-i18n="programs_title">Tailored for ages 8 to 17</h2>
+        <p class="section-subtitle" data-i18n="programs_subtitle">
+          We group students carefully by both age group and Spanish level to ensure comfortable, age-appropriate interactions.
+        </p>
+      </div>
+
+      <div class="age-cards-grid">
+        <!-- Explorers (8-10 yrs) -->
+        <div class="age-card">
+          <div class="age-card-img">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Explorers 8-10 years learning Spanish" />
+            <span class="age-badge-pill">8–10 years</span>
+          </div>
+          <div class="age-card-body">
+            <h3 class="age-card-title">Explorers</h3>
+            <p class="age-card-text" data-i18n="age_explorers_desc">
+              Visual and playful learning centered on interactive stories, vibrant characters, high-frequency vocabulary, and cheerful introductory dialogues.
+            </p>
+            <button class="btn btn-secondary btn-full" onclick="HOLA_APP.openTrialModal()" data-i18n="hero_cta_primary">
+              Book a Free Trial
+            </button>
+          </div>
+        </div>
+
+        <!-- Adventurers (11-13 yrs) - PERFECTLY CENTERED PRE-TEEN IMAGE -->
+        <div class="age-card">
+          <div class="age-card-img">
+            <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=800&q=80" alt="Adventurers 11-13 years learning Spanish online" style="object-position: center top;" />
+            <span class="age-badge-pill">11–13 years</span>
+          </div>
+          <div class="age-card-body">
+            <h3 class="age-card-title">Adventurers</h3>
+            <p class="age-card-text" data-i18n="age_adventurers_desc">
+              Mission-driven challenges, real-world communication scenarios, group problem-solving, and exciting cultural discovery across Hispanic nations.
+            </p>
+            <button class="btn btn-secondary btn-full" onclick="HOLA_APP.openTrialModal()" data-i18n="hero_cta_primary">
+              Book a Free Trial
+            </button>
+          </div>
+        </div>
+
+        <!-- Teens (14-17 yrs) -->
+        <div class="age-card">
+          <div class="age-card-img">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Teens 14-17 years learning Spanish" />
+            <span class="age-badge-pill">14–17 years</span>
+          </div>
+          <div class="age-card-body">
+            <h3 class="age-card-title">Teens</h3>
+            <p class="age-card-text" data-i18n="age_teens_desc">
+              Authentic communication tailored to youth interests, travel, music, global topics, debate, and progressive independence in spoken Spanish.
+            </p>
+            <button class="btn btn-secondary btn-full" onclick="HOLA_APP.openTrialModal()" data-i18n="hero_cta_primary">
+              Book a Free Trial
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TWO LEARNING PATHS -->
+  <section class="section section-border-top" style="background:var(--bg-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="paths_tag">LEARNING PATHS</span>
+        <h2 class="section-title" data-i18n="paths_title">Two Differentiated Tracks</h2>
+        <p class="section-subtitle" data-i18n="paths_subtitle">
+          Whether your child is starting from scratch or strengthening family heritage Spanish, we have the right path.
+        </p>
+      </div>
+
+      <div class="paths-grid" id="pathsGrid">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- LATIN AMERICA CULTURAL DISCOVERY STRIP -->
+  <section class="culture-strip">
+    <div class="container" style="text-align:center;">
+      <div style="font-size:0.875rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--yellow-bright);margin-bottom:0.75rem;">
+        LATIN AMERICAN CULTURAL EXPLORATION
+      </div>
+      <h2 style="font-size:2.4rem;color:white;margin-bottom:1rem;" data-i18n="culture_title">
+        Discover Spanish. Discover a world.
+      </h2>
+      <p style="color:#94A3B8;max-width:640px;margin:0 auto;font-size:1.05rem;" data-i18n="culture_desc">
+        Explore rich traditions, geography, food, and music from Mexico, Colombia, Peru, Argentina, Chile, Costa Rica, and the Caribbean.
+      </p>
+    </div>
+  </section>
+
+  <!-- TEACHERS SHOWCASE -->
+  <section class="section section-border-top">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="teachers_tag">OUR FACULTY</span>
+        <h2 class="section-title" data-i18n="teachers_title">Learn with native Spanish-speaking teachers</h2>
+        <p class="section-subtitle" data-i18n="teachers_subtitle">
+          Our teaching team combines pedagogical experience, native fluency, and passion for inspiring young minds across Latin America.
+        </p>
+      </div>
+
+      <div class="faculty-grid" id="teachersGrid">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PARENT PROGRESS SECTION -->
+  <section class="section section-border-top" id="for-parents" style="background:var(--bg-subtle);">
+    <div class="container">
+      <div class="parent-grid">
+        <div>
+          <span class="section-tag" data-i18n="parent_tag">PARENT TRANSPARENCY</span>
+          <h2 class="section-title" data-i18n="parent_title">You see their progress, too.</h2>
+          <p class="section-subtitle" style="margin-bottom:2rem;" data-i18n="parent_subtitle">
+            We keep families closely accompanied. You will receive regular progress reports highlighting your child's achievements and growth.
+          </p>
+
+          <div style="display:flex;flex-direction:column;gap:1.5rem;">
+            <div style="display:flex;gap:1rem;">
+              <div style="color:var(--teal-secondary);font-weight:800;">✓</div>
+              <div>
+                <h4 style="font-size:1rem;margin-bottom:0.2rem;" data-i18n="parent_feat1_title">Comprehension & Vocabulary Metrics</h4>
+                <p style="font-size:0.875rem;" data-i18n="parent_feat1_desc">Track word acquisition, active listening, and thematic understanding.</p>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:1rem;">
+              <div style="color:var(--teal-secondary);font-weight:800;">✓</div>
+              <div>
+                <h4 style="font-size:1rem;margin-bottom:0.2rem;" data-i18n="parent_feat2_title">Oral Fluency & Participation</h4>
+                <p style="font-size:0.875rem;" data-i18n="parent_feat2_desc">Clear updates on speaking confidence, interaction, and pronunciation.</p>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:1rem;">
+              <div style="color:var(--teal-secondary);font-weight:800;">✓</div>
+              <div>
+                <h4 style="font-size:1rem;margin-bottom:0.2rem;" data-i18n="parent_feat3_title">Goals & Upcoming Challenges</h4>
+                <p style="font-size:0.875rem;" data-i18n="parent_feat3_desc">Understand what milestones your child has mastered and what adventure lies ahead.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Clean Paper Progress Report Preview Mockup -->
+        <div class="report-paper">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding-bottom:1.25rem;border-bottom:1px solid var(--border-light);margin-bottom:1.5rem;">
+            <div>
+              <div style="font-weight:800;font-size:1.1rem;">Mateo S.</div>
+              <div style="font-size:0.8rem;color:var(--text-subtle);" data-i18n="report_student_level">Adventurers • Heritage Spanish</div>
+            </div>
+            <span style="font-size:0.75rem;font-weight:800;color:var(--teal-secondary);background:var(--teal-wash);padding:0.25rem 0.65rem;border-radius:var(--radius-full);" data-i18n="report_status">Excellent Progress 🌟</span>
+          </div>
+
+          <div style="margin-bottom:1.15rem;">
+            <div style="display:flex;justify-content:space-between;font-size:0.875rem;font-weight:700;margin-bottom:0.35rem;">
+              <span data-i18n="report_m1">Oral Expression & Confidence</span>
+              <span>88%</span>
+            </div>
+            <div class="metric-bar-bg"><div class="metric-bar-fill" style="width:88%;"></div></div>
+          </div>
+
+          <div style="margin-bottom:1.15rem;">
+            <div style="display:flex;justify-content:space-between;font-size:0.875rem;font-weight:700;margin-bottom:0.35rem;">
+              <span data-i18n="report_m2">Vocabulary & Theme Mastery</span>
+              <span>94%</span>
+            </div>
+            <div class="metric-bar-bg"><div class="metric-bar-fill" style="width:94%;"></div></div>
+          </div>
+
+          <div style="margin-bottom:1.15rem;">
+            <div style="display:flex;justify-content:space-between;font-size:0.875rem;font-weight:700;margin-bottom:0.35rem;">
+              <span data-i18n="report_m3">Group Mission Participation</span>
+              <span>96%</span>
+            </div>
+            <div class="metric-bar-bg"><div class="metric-bar-fill" style="width:96%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD CTA SECTION -->
+  <section class="section section-border-top" id="book-trial">
+    <div class="container">
+      <div class="lead-banner">
+        <div class="lead-banner-grid">
+          <div>
+            <h2 class="lead-banner-title" data-i18n="cta_title">Ready to start their Spanish adventure?</h2>
+            <p class="lead-banner-desc" data-i18n="cta_desc">
+              Book a free trial class and experience how Hola Mundo makes learning Spanish exciting, natural, and rewarding.
+            </p>
+          </div>
+
+          <!-- Inline Form Paper -->
+          <div class="form-paper">
+            <h3 style="font-family:var(--font-heading);font-size:1.4rem;margin-bottom:1.25rem;" data-i18n="form_title">
+              Book a Free Trial Class
+            </h3>
+
+            <form class="trial-form">
+              <!-- Anti-Spam Honeypot Field -->
+              <input type="text" name="_honeypot" style="display:none !important;" tabindex="-1" autocomplete="off" />
+
+              <div class="form-group">
+                <label class="form-label" data-i18n="form_parent_name">Parent/Guardian Name *</label>
+                <input type="text" name="parent_name" class="form-input" required data-i18n="form_parent_name_ph" placeholder="e.g. Sarah Jenkins" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" data-i18n="form_email">Email Address *</label>
+                <input type="email" name="email" class="form-input" required data-i18n="form_email_ph" placeholder="e.g. sarah.jenkins@example.com" />
+              </div>
+
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+                <div class="form-group">
+                  <label class="form-label" data-i18n="form_student_age">Student Age *</label>
+                  <select name="student_age" class="form-select" required>
+                    <option value="" disabled selected data-i18n="form_student_age_ph">Select age...</option>
+                    <option value="8">8 years</option>
+                    <option value="9">9 years</option>
+                    <option value="10">10 years</option>
+                    <option value="11">11 years</option>
+                    <option value="12">12 years</option>
+                    <option value="13">13 years</option>
+                    <option value="14">14 years</option>
+                    <option value="15">15 years</option>
+                    <option value="16">16 years</option>
+                    <option value="17">17 years</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" data-i18n="form_country">Country *</label>
+                  <input type="text" name="country" class="form-input" required data-i18n="form_country_ph" placeholder="e.g. Switzerland..." />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" data-i18n="form_level">Current Spanish Level *</label>
+                <select name="spanish_level" class="form-select" required>
+                  <option value="" disabled selected data-i18n="form_level_select">Select current level...</option>
+                  <option value="No Spanish yet" data-i18n="form_level_opt1">No Spanish yet (Complete beginner)</option>
+                  <option value="Beginner" data-i18n="form_level_opt2">Beginner (Knows a few basic words)</option>
+                  <option value="Some Spanish" data-i18n="form_level_opt3">Some Spanish (Understands simple sentences)</option>
+                  <option value="Understands Spanish" data-i18n="form_level_opt4">Understands Spanish but speaks little</option>
+                  <option value="Conversational" data-i18n="form_level_opt5">Conversational (Bilingual or heritage background)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" data-i18n="form_why">Why would you like your child to learn Spanish? (Optional)</label>
+                <textarea name="why_learn" class="form-textarea" rows="2" data-i18n="form_why_ph" placeholder="e.g. Family connections..."></textarea>
+              </div>
+
+              <div class="form-checkbox-row">
+                <input type="checkbox" name="privacy_consent" class="form-checkbox" id="privacyConsentInline" required />
+                <label for="privacyConsentInline" style="font-size:0.8rem;color:var(--text-muted);">
+                  <span data-i18n="form_privacy">I accept the Privacy Policy and agree to be contacted regarding the free trial class.</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-yellow btn-full" data-i18n="form_submit">
+                Reserve Free Trial
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section section-border-top" id="faq" style="background:var(--bg-main);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="faq_tag">GOT QUESTIONS?</span>
+        <h2 class="section-title" data-i18n="faq_title">Frequently Asked Questions</h2>
+        <div style="margin-top:1.5rem;max-width:460px;margin-left:auto;margin-right:auto;">
+          <input type="text" id="faqSearchInput" class="form-input" data-i18n="faq_search_ph" placeholder="Search questions..." />
+        </div>
+      </div>
+
+      <div class="faq-list" id="faqAccordion">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo-main" style="color:white;margin-bottom:0.5rem;">
+            Hola<span>Mundo</span><span class="brand-logo-spark">✦</span>
+          </div>
+          <p style="margin-bottom:1.5rem;line-height:1.6;" data-i18n="footer_brand_desc">
+            Online Spanish Academy for Kids & Teens. Learn Spanish through live adventures, stories, and real conversations.
+          </p>
+          <div class="lang-switcher" style="display:inline-flex;">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="es">ES</button>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="color:white;font-size:0.95rem;margin-bottom:1.25rem;" data-i18n="footer_nav_header">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#how-it-works" data-i18n="nav_how_it_works">How it works</a></li>
+            <li><a href="#programs" data-i18n="nav_programs">Programs</a></li>
+            <li><a href="#our-approach" data-i18n="nav_our_approach">Our approach</a></li>
+            <li><a href="#for-parents" data-i18n="nav_for_parents">For parents</a></li>
+            <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color:white;font-size:0.95rem;margin-bottom:1.25rem;" data-i18n="footer_legal_header">Legal & Privacy</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="HOLA_APP.openLegalModal('privacy')" data-i18n="legal_privacy_title">Privacy Policy</a></li>
+            <li><a href="javascript:void(0)" onclick="HOLA_APP.openLegalModal('terms')" data-i18n="legal_terms_title">Terms & Conditions</a></li>
+            <li><a href="javascript:void(0)" onclick="HOLA_APP.openLegalModal('cookie')" data-i18n="legal_cookie_title">Cookie Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color:white;font-size:0.95rem;margin-bottom:1.25rem;" data-i18n="footer_contact_header">Contact</h4>
+          <ul class="footer-links" id="contactLinksContainer">
+            <!-- Dynamic contact links rendering configured parameters -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Hola Mundo. <span data-i18n="footer_rights">All rights reserved.</span>
+        </div>
+        <div style="color:#64748B;" data-i18n="footer_educamax_notice">
+          Hola Mundo is operated by EducaMax [Razón Social por completar], Chile.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY CTA BAR -->
+  <div class="mobile-sticky-bar" id="mobileStickyBar">
+    <div style="display:flex;flex-direction:column;">
+      <span style="font-weight:800;font-size:0.875rem;">Hola Mundo Academy</span>
+      <span style="font-size:0.75rem;color:var(--text-subtle);">Free Trial Session</span>
+    </div>
+    <button class="btn btn-yellow btn-sm" onclick="HOLA_APP.openTrialModal()" data-i18n="nav_book_trial">
+      Book Free Trial
+    </button>
+  </div>
+
+  <!-- FREE TRIAL MODAL POPUP -->
+  <div class="modal-backdrop" id="trialModal">
+    <div class="modal-paper">
+      <button class="modal-close" onclick="HOLA_APP.closeModal('trialModal')" aria-label="Close modal">&times;</button>
+      <div style="margin-bottom:1.5rem;">
+        <h3 style="font-family:var(--font-heading);font-size:1.5rem;margin-bottom:0.25rem;" data-i18n="form_title">
+          Book a Free Trial Class
+        </h3>
+        <p style="font-size:0.875rem;color:var(--text-subtle);">Join a live small-group placement session for your child.</p>
+      </div>
+
+      <form class="trial-form">
+        <!-- Anti-Spam Honeypot Field -->
+        <input type="text" name="_honeypot" style="display:none !important;" tabindex="-1" autocomplete="off" />
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="form_parent_name">Parent/Guardian Name *</label>
+          <input type="text" name="parent_name" class="form-input" required data-i18n="form_parent_name_ph" placeholder="e.g. Sarah Jenkins" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="form_email">Email Address *</label>
+          <input type="email" name="email" class="form-input" required data-i18n="form_email_ph" placeholder="e.g. sarah.jenkins@example.com" />
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div class="form-group">
+            <label class="form-label" data-i18n="form_student_age">Student Age *</label>
+            <select name="student_age" class="form-select" required>
+              <option value="" disabled selected data-i18n="form_student_age_ph">Select age...</option>
+              <option value="8">8 years</option>
+              <option value="9">9 years</option>
+              <option value="10">10 years</option>
+              <option value="11">11 years</option>
+              <option value="12">12 years</option>
+              <option value="13">13 years</option>
+              <option value="14">14 years</option>
+              <option value="15">15 years</option>
+              <option value="16">16 years</option>
+              <option value="17">17 years</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" data-i18n="form_country">Country *</label>
+            <input type="text" name="country" class="form-input" required data-i18n="form_country_ph" placeholder="e.g. Switzerland..." />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="form_level">Current Spanish Level *</label>
+          <select name="spanish_level" class="form-select" required>
+            <option value="" disabled selected data-i18n="form_level_select">Select current level...</option>
+            <option value="No Spanish yet" data-i18n="form_level_opt1">No Spanish yet (Complete beginner)</option>
+            <option value="Beginner" data-i18n="form_level_opt2">Beginner (Knows a few basic words)</option>
+            <option value="Some Spanish" data-i18n="form_level_opt3">Some Spanish (Understands simple sentences)</option>
+            <option value="Understands Spanish" data-i18n="form_level_opt4">Understands Spanish but speaks little</option>
+            <option value="Conversational" data-i18n="form_level_opt5">Conversational (Bilingual or heritage background)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="form_why">Why would you like your child to learn Spanish? (Optional)</label>
+          <textarea name="why_learn" class="form-textarea" rows="2" data-i18n="form_why_ph" placeholder="e.g. Family connections..."></textarea>
+        </div>
+
+        <div class="form-checkbox-row">
+          <input type="checkbox" name="privacy_consent" class="form-checkbox" id="privacyConsentModal" required />
+          <label for="privacyConsentModal" style="font-size:0.8rem;color:var(--text-muted);">
+            <span data-i18n="form_privacy">I accept the Privacy Policy and agree to be contacted regarding the free trial class.</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-yellow btn-full" data-i18n="form_submit">
+          Reserve Free Trial
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FEEDBACK STATUS MODAL (SUCCESS & ERROR STATES) -->
+  <div class="modal-backdrop" id="statusModal">
+    <div class="modal-paper" style="text-align:center;">
+      <div id="statusModalIcon" style="width:60px;height:60px;border-radius:30px;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem auto;"></div>
+      <h3 id="statusModalTitle" style="font-family:var(--font-heading);font-size:1.5rem;margin-bottom:0.5rem;"></h3>
+      <p id="statusModalMessage" style="font-size:0.95rem;color:var(--text-muted);margin-bottom:1.5rem;line-height:1.6;"></p>
+
+      <div id="statusModalDetail" style="background:var(--bg-subtle);padding:1rem;border-radius:var(--radius-sm);text-align:left;font-size:0.85rem;margin-bottom:1.5rem;border:1px solid var(--border-light);display:none;"></div>
+
+      <button class="btn btn-navy btn-full" onclick="HOLA_APP.closeModal('statusModal')" data-i18n="success_close">
+        Back to Website
+      </button>
+    </div>
+  </div>
+
+  <!-- MISSION DETAIL MODAL -->
+  <div class="modal-backdrop" id="missionModal">
+    <div class="modal-paper">
+      <button class="modal-close" onclick="HOLA_APP.closeModal('missionModal')" aria-label="Close modal">&times;</button>
+      <h3 id="missionModalTitle" style="font-family:var(--font-heading);font-size:1.4rem;margin-bottom:1rem;">Mission Preview</h3>
+      <div id="missionModalBody"></div>
+      <div style="margin-top:1.5rem;">
+        <button class="btn btn-yellow btn-full" onclick="HOLA_APP.closeModal('missionModal');HOLA_APP.openTrialModal();" data-i18n="hero_cta_primary">
+          Book a Free Trial
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEGAL POLICY MODAL -->
+  <div class="modal-backdrop" id="legalModal">
+    <div class="modal-paper">
+      <button class="modal-close" onclick="HOLA_APP.closeModal('legalModal')" aria-label="Close modal">&times;</button>
+      <h3 id="legalModalTitle" style="font-family:var(--font-heading);font-size:1.4rem;margin-bottom:1rem;">Legal Policy</h3>
+      <div id="legalModalBody"></div>
+    </div>
+  </div>
+
+  <!-- COOKIE CONSENT BANNER -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div style="font-weight:800;font-size:0.95rem;" data-i18n="cookie_title">We value your privacy 🍪</div>
+    <p style="font-size:0.825rem;color:#CBD5E1;line-height:1.5;" data-i18n="cookie_text">
+      We use essential cookies to ensure our website functions properly and to measure lead conversion performance.
+    </p>
+    <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;">
+      <button class="btn btn-yellow btn-sm" onclick="HOLA_COOKIE.acceptAll()" data-i18n="cookie_accept">Accept All</button>
+      <button class="btn btn-secondary btn-sm" onclick="HOLA_COOKIE.acceptEssential()" data-i18n="cookie_essential">Essential Only</button>
+      <a href="javascript:void(0)" onclick="HOLA_APP.openLegalModal('cookie')" style="font-size:0.775rem;color:#94A3B8;text-decoration:underline;" data-i18n="cookie_details">Privacy Details</a>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       EMBEDDED JAVASCRIPT APP CORE & DATA STORE
+       ========================================== -->
+  <script>
+    /* 1. CENTRAL CONFIGURATION VARIABLES */
+    window.HOLA_CONFIG = {
+      // Primary Email Destination
+      CONTACT_EMAIL: "educamaxcl@gmail.com",
+      
+      // WhatsApp Number (Optional placeholder, leave "" until official number is assigned)
+      WHATSAPP_NUMBER: "",                    
+
+      // Static Email Form Endpoint (FormSubmit API configured for educamaxcl@gmail.com)
+      FORM_ENDPOINT: "https://formsubmit.co/ajax/educamaxcl@gmail.com",
+      FORM_SUBJECT: "Hola Mundo | Nueva solicitud de clase de prueba",
+
+      // Legal Operating Entity Details
+      LEGAL_ENTITY: {
+        company: "EducaMax SpA",
+        country: "Chile",
+        details: "[Razón Social EducaMax SpA / por completar]",
+        email: "educamaxcl@gmail.com"
+      },
+
+      // Feature Flags
+      featureFlags: {
+        showTestimonials: false,
+        showPricing: false,      
+        enablePayments: false    
+      }
+    };
+
+    /* 2. DATA STORE */
+    window.HOLA_DATA = {
+      classSteps: [
+        { num: "01", en: { title: "Meet your group", desc: "Connect live with friendly peers and your Latin American native teacher." }, es: { title: "Conoce a tu grupo", desc: "Conéctate en vivo con compañeros y tu profesor nativo de Latinoamérica." } },
+        { num: "02", en: { title: "Discover today's mission", desc: "Uncover the day's adventure topic, cultural quest, or mystery challenge." }, es: { title: "Descubre la misión del día", desc: "Conoce el tema de aventura, desafío cultural o misterio del día." } },
+        { num: "03", en: { title: "Speak, play & solve", desc: "Engage in active conversations, role-play games, and team challenges." }, es: { title: "Habla, juega y resuelve", desc: "Participa en conversaciones activas, juegos de rol y desafíos en equipo." } },
+        { num: "04", en: { title: "Real conversation", desc: "Apply Spanish naturally in authentic communicative situations." }, es: { title: "Conversación real", desc: "Aplica el español con naturalidad en situaciones comunicativas reales." } },
+        { num: "05", en: { title: "Keep progressing", desc: "Receive positive reinforcement and track milestones for next session." }, es: { title: "Sigue avanzando", desc: "Recibe refuerzo positivo y da seguimiento a tus avances para la próxima sesión." } }
+      ],
+
+      sampleMissions: [
+        { id: "m1", tag: "Explorers (8-10)", image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80", en: { title: "The Mystery of the Lost Temple", desc: "Decode Mayan riddles, practice action verbs, and navigate a jungle map.", details: "Collaborative quest using color vocabulary, direction phrases, and team clues." }, es: { title: "El Misterio del Templo Perdido", desc: "Descifra acertijos mayas, practica verbos de acción y navega por un mapa de selva.", details: "Búsqueda colaborativa usando vocabulario de colores, direcciones y pistas." } },
+        { id: "m2", tag: "Adventurers (11-13)", image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80", en: { title: "Journey through the Andes", desc: "Travel across mountain peaks, order regional food, and solve challenges.", details: "Practices restaurant ordering, weather descriptions, and regional geography." }, es: { title: "Viaje a través de los Andes", desc: "Viaja por las montañas, pide comida típica y resuelve desafíos en la altura.", details: "Practica cómo pedir alimentos, describir el clima y explorar la geografía." } },
+        { id: "m3", tag: "Adventurers & Teens", image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=600&q=80", en: { title: "The Secret of the Amazon", desc: "Investigate biodiversity findings and interview local rainforest guides in Spanish.", details: "Focuses on environmental vocabulary, asking questions, and expressing opinions." }, es: { title: "El Secreto del Amazonas", desc: "Investiga la biodiversidad y entrevista a guías de la selva en español.", details: "Enfoque en vocabulario ambiental, preguntas y expresión de opiniones." } },
+        { id: "m4", tag: "Teens (14-17)", image: "https://images.unsplash.com/photo-1512813195386-6cf811ad3542?auto=format&fit=crop&w=600&q=80", en: { title: "A Mission in Mexico", desc: "Uncover culinary traditions, plan a festival budget, and debate local legends.", details: "Advanced conversational project building spontaneous speech and nuance." }, es: { title: "Una Misión en México", desc: "Descubre tradiciones culinarias, organiza un festival y debate leyendas.", details: "Proyecto conversacional avanzado para desarrollar espontaneidad y matices." } }
+      ],
+
+      learningPaths: [
+        {
+          featured: true,
+          en: {
+            badge: "Foreign Language Track",
+            title: "Spanish as a New Language",
+            subtitle: "For kids and teens starting from scratch or building foundational skills.",
+            features: [
+              "Progressive oral comprehension & active listening",
+              "Interactive vocabulary expansion through storytelling",
+              "Confidence building in early speaking & phrase construction",
+              "Group dynamics encouraging low-pressure participation"
+            ]
+          },
+          es: {
+            badge: "Lengua Extranjera",
+            title: "Español como Nuevo Idioma",
+            subtitle: "Para niños y adolescentes que comienzan desde cero o desarrollan competencias iniciales.",
+            features: [
+              "Comprensión oral progresiva y escucha activa",
+              "Expansión interactiva de vocabulario con historias",
+              "Desarrollo de confianza en la producción oral y frases",
+              "Dinámicas grupales lúdicas y libres de presión"
+            ]
+          }
+        },
+        {
+          featured: false,
+          en: {
+            badge: "Bilingual & Family Heritage",
+            title: "Heritage Spanish",
+            subtitle: "For students raised in bilingual homes who already understand or speak partial Spanish.",
+            features: [
+              "Strengthen vocabulary, grammar structure, and accent confidence",
+              "Transition from passive listening to active, fluent conversation",
+              "Deep cultural connection with Latin American literature & heritage",
+              "Reading comprehension & expressiveness in formal/informal contexts"
+            ]
+          },
+          es: {
+            badge: "Hablantes de Herencia",
+            title: "Español de Herencia",
+            subtitle: "Para estudiantes de familias bilingües que ya comprenden o hablan parcialmente el idioma.",
+            features: [
+              "Fortalecimiento de vocabulario, estructura y confianza",
+              "Transición de la escucha pasiva a la conversación fluida",
+              "Conexión cultural profunda con la riqueza hispanoamericana",
+              "Comprensión lectora y expresión formal e informal"
+            ]
+          }
+        }
+      ],
+
+      teachers: [
+        { en: { role: "Native Spanish Teacher", region: "Latin America", bio: "Certified educators specializing in child pedagogy and interactive online learning methodologies." }, es: { role: "Profesor Nativo de Español", region: "Latinoamérica", bio: "Educadores certificados especializados en pedagogía infantil y metodologías interactivas online." } },
+        { en: { role: "Native Spanish Teacher", region: "Latin America", bio: "Passionate native speakers trained in encouraging supportive small-group dynamic interaction." }, es: { role: "Profesora Nativa de Español", region: "Latinoamérica", bio: "Hablantes nativos apasionados por crear dinámicas grupales cálidas, empáticas y seguras." } },
+        { en: { role: "Native Spanish Teacher", region: "Latin America", bio: "Expert mentors dedicated to storytelling, active listening, and gamified conversational fluency." }, es: { role: "Profesor Nativo de Español", region: "Latinoamérica", bio: "Mentores expertos dedicados al storytelling, escucha activa y fluidez conversacional lúdica." } }
+      ],
+
+      faqs: [
+        { id: "faq-1", en: { q: "Does my child need to know Spanish already?", a: "No! We welcome complete beginners as well as students with prior exposure. We offer two distinct learning paths and group students by age and proficiency." }, es: { q: "¿Mi hijo necesita saber español previamente?", a: "¡No! Recibimos a estudiantes desde cero absoluto y a quienes ya tienen contacto previo. Ofrecemos dos rutas diferenciadas organizadas por edad y nivel." } },
+        { id: "faq-2", en: { q: "How are students grouped?", a: "Groups are carefully balanced considering both student age (Explorers 8-10, Adventurers 11-13, Teens 14-17) and current Spanish level to ensure an optimal social fit." }, es: { q: "¿Cómo se agrupan los estudiantes?", a: "Los grupos se organizan equilibrando cuidadosamente la edad (Explorers 8-10, Adventurers 11-13, Teens 14-17) y el nivel actual de español." } },
+        { id: "faq-3", en: { q: "Are classes live?", a: "Yes! All Hola Mundo classes are 100% online and live, featuring real-time teacher guidance and active peer interaction in small groups." }, es: { q: "¿Las clases son en vivo?", a: "¡Sí! Todas las clases de Hola Mundo son 100 % online y en vivo, guiadas en tiempo real por profesores y con interacción entre compañeros." } },
+        { id: "faq-4", en: { q: "Are classes individual or group-based?", a: "Our core academy framework is based on small-group live learning. Small groups foster rich peer communication, collaborative mission solving, and dynamic fun." }, es: { q: "¿Las clases son individuales o grupales?", a: "Nuestro programa se basa en el aprendizaje en vivo en grupos reducidos para fomentar la comunicación entre pares y la resolución de misiones." } },
+        { id: "faq-5", en: { q: "Where are the teachers from?", a: "All of our teachers are native Spanish speakers from Latin America, bringing educational expertise, warmth, and rich cultural diversity to every live lesson." }, es: { q: "¿De dónde son los profesores?", a: "Todos nuestros profesores son hablantes nativos de español de Latinoamérica, aportando calidez, profesionalismo y diversidad cultural." } },
+        { id: "faq-6", en: { q: "What technology does my child need?", a: "A computer or tablet with a working web camera, microphone, stable internet connection, and a quiet learning space so your child can actively participate." }, es: { q: "¿Qué tecnología necesita mi hijo?", a: "Un computador o tablet con cámara, micrófono, conexión estable a Internet y un espacio tranquilo para participar activamente." } },
+        { id: "faq-7", en: { q: "Can my child join from any country?", a: "Absolutely! Hola Mundo is built as an international academy for families living anywhere in the world (Switzerland, Germany, UAE, Nordics, Americas, etc.)." }, es: { q: "¿Puede mi hijo unirse desde cualquier país?", a: "¡Absolutamente! Hola Mundo está diseñada como una academia online internacional para familias residentes en cualquier país." } }
+      ]
+    };
+
+    /* 3. BILINGUAL DICTIONARY (EN | ES) */
+    window.HOLA_I18N = {
+      currentLang: 'en',
+      translations: {
+        en: {
+          nav_how_it_works: "How it works", nav_programs: "Programs", nav_our_approach: "Our approach", nav_for_parents: "For parents", nav_faq: "FAQ", nav_book_trial: "Book a Free Trial",
+          hero_badge: "✨ Online Spanish Academy for Kids & Teens", hero_title_1: "Spanish becomes an ", hero_title_2: "adventure.",
+          hero_subtitle: "Live online Spanish classes for kids and teens ages 8–17. Small groups, native teachers and real conversations.",
+          hero_cta_primary: "Book a Free Trial", hero_cta_secondary: "Discover Hola Mundo",
+          hero_trust_live: "Live online classes", hero_trust_groups: "Small groups", hero_trust_native: "Native teachers from Latin America",
+          hero_floating_badge_text: "Native Spanish teachers connecting kids to real conversations worldwide.",
+          trust_live_title: "100% Live & Interactive", trust_groups_title: "Small Groups", trust_teachers_title: "Latin American Teachers", trust_reports_title: "Progress Reports",
+          approach_tag: "OUR APPROACH", approach_title: "Classes kids look forward to.", approach_desc: "We turn every class into an experience. Through missions, games, stories and real conversation, students learn Spanish in a natural, meaningful and fun way.",
+          approach_bullet1: "Live, small-group classes", approach_bullet2: "Native Spanish-speaking teachers from Latin America", approach_bullet3: "Communicative and interactive methodology", approach_bullet4: "Adventures and real-world topics", approach_bullet5: "Progress reports for families",
+          approach_quote: '"More than a class, it\'s an experience."',
+          how_tag: "A CLASS AT HOLA MUNDO", how_title: "This is what learning looks like", how_subtitle: "A clear 5-step interactive process designed to make every lesson dynamic, active, and conversational.",
+          method_illustrative_note: "* The missions shown below are illustrative adventure examples showcasing our gamified learning approach.",
+          programs_tag: "AGE SEGMENTATION", programs_title: "Tailored for ages 8 to 17", programs_subtitle: "We group students carefully by both age group and Spanish level to ensure comfortable, age-appropriate interactions.",
+          age_explorers_desc: "Visual and playful learning centered on interactive stories, vibrant characters, high-frequency vocabulary, and cheerful introductory dialogues.",
+          age_adventurers_desc: "Mission-driven challenges, real-world communication scenarios, group problem-solving, and exciting cultural discovery across Hispanic nations.",
+          age_teens_desc: "Authentic communication tailored to youth interests, travel, music, global topics, debate, and progressive independence in spoken Spanish.",
+          paths_tag: "LEARNING PATHS", paths_title: "Two Differentiated Tracks", paths_subtitle: "Whether your child is starting from scratch or strengthening family heritage Spanish, we have the right path.",
+          culture_title: "Discover Spanish. Discover a world.", culture_desc: "Explore rich traditions, geography, food, and music from Mexico, Colombia, Peru, Argentina, Chile, Costa Rica, and the Caribbean.",
+          teachers_tag: "OUR FACULTY", teachers_title: "Learn with native Spanish-speaking teachers", teachers_subtitle: "Our teaching team combines pedagogical experience, native fluency, and passion for inspiring young minds across Latin America.",
+          parent_tag: "PARENT TRANSPARENCY", parent_title: "You see their progress, too.", parent_subtitle: "We keep families closely accompanied. You will receive regular progress reports highlighting your child's achievements.",
+          parent_feat1_title: "Comprehension & Vocabulary Metrics", parent_feat1_desc: "Track word acquisition, active listening, and thematic understanding.",
+          parent_feat2_title: "Oral Fluency & Participation", parent_feat2_desc: "Clear updates on speaking confidence, interaction, and pronunciation.",
+          parent_feat3_title: "Goals & Upcoming Challenges", parent_feat3_desc: "Understand what milestones your child has mastered and what adventure lies ahead.",
+          report_student_level: "Adventurers • Heritage Spanish", report_status: "Excellent Progress 🌟", report_m1: "Oral Expression & Confidence", report_m2: "Vocabulary & Theme Mastery", report_m3: "Group Mission Participation",
+          cta_title: "Ready to start their Spanish adventure?", cta_desc: "Book a free trial class and experience how Hola Mundo makes learning Spanish exciting, natural, and rewarding.",
+          form_title: "Book a Free Trial Class", form_parent_name: "Parent/Guardian Name *", form_parent_name_ph: "e.g. Sarah Jenkins", form_email: "Email Address *", form_email_ph: "e.g. sarah.jenkins@example.com",
+          form_student_age: "Student Age *", form_student_age_ph: "Select age...", form_country: "Country *", form_country_ph: "e.g. Switzerland, Germany...",
+          form_level: "Current Spanish Level *", form_level_select: "Select current level...", form_level_opt1: "No Spanish yet (Complete beginner)", form_level_opt2: "Beginner (Knows a few basic words)", form_level_opt3: "Some Spanish (Understands simple sentences)", form_level_opt4: "Understands Spanish but speaks little", form_level_opt5: "Conversational (Bilingual or heritage background)",
+          form_why: "Why would you like your child to learn Spanish? (Optional)", form_why_ph: "e.g. Family connections, school support...",
+          form_privacy: "I accept the Privacy Policy and agree to be contacted regarding the free trial class.", form_submit: "Reserve Free Trial",
+          form_submitting: "Sending request...",
+          success_title: "Thank you!",
+          success_desc: "We’ve received your request. We’ll contact you soon to arrange your free trial.",
+          error_title: "Request Error",
+          error_desc: "We couldn't send your request. Please try again or contact us by email at ",
+          success_close: "Back to Website",
+          faq_tag: "GOT QUESTIONS?", faq_title: "Frequently Asked Questions", faq_search_ph: "Search questions...",
+          footer_brand_desc: "Online Spanish Academy for Kids & Teens. Learn Spanish through live adventures, stories, and real conversations.",
+          footer_nav_header: "Navigation", footer_legal_header: "Legal & Privacy", footer_contact_header: "Contact", footer_rights: "All rights reserved.", footer_educamax_notice: "Hola Mundo is operated by EducaMax [Razón Social por completar], Chile.",
+          legal_privacy_title: "Privacy Policy", legal_terms_title: "Terms & Conditions", legal_cookie_title: "Cookie Policy",
+          cookie_title: "We value your privacy 🍪", cookie_text: "We use essential cookies to ensure our website functions properly and to measure lead conversion performance.", cookie_accept: "Accept All", cookie_essential: "Essential Only", cookie_details: "Privacy Details"
+        },
+
+        es: {
+          nav_how_it_works: "Cómo funciona", nav_programs: "Programas", nav_our_approach: "Nuestra metodología", nav_for_parents: "Para padres", nav_faq: "Preguntas frecuentes", nav_book_trial: "Reserva una clase de prueba",
+          hero_badge: "✨ Academia de Español Online 100% en Vivo", hero_title_1: "El español se convierte en una ", hero_title_2: "aventura.",
+          hero_subtitle: "Clases de español online en vivo para niños y adolescentes de 8 a 17 años. Grupos reducidos, profesores nativos y conversaciones reales.",
+          hero_cta_primary: "Reserva una clase de prueba", hero_cta_secondary: "Descubre Hola Mundo",
+          hero_trust_live: "Clases online en vivo", hero_trust_groups: "Grupos reducidos", hero_trust_native: "Profesores nativos de Latinoamérica",
+          hero_floating_badge_text: "Profesores nativos de español conectando a estudiantes de todo el mundo.",
+          trust_live_title: "100 % en Vivo e Interactivo", trust_groups_title: "Grupos Reducidos", trust_teachers_title: "Profesores de Latinoamérica", trust_reports_title: "Reportes de Progreso",
+          approach_tag: "NUESTRA METODOLOGÍA", approach_title: "Clases que los niños esperan con entusiasmo.", approach_desc: "Transformamos cada clase en una experiencia. A través de misiones, juegos, historias y conversaciones reales, los estudiantes aprenden español de forma natural y entretenida.",
+          approach_bullet1: "Clases en vivo en grupos reducidos", approach_bullet2: "Profesores nativos de español de Latinoamérica", approach_bullet3: "Metodología comunicativa e interactiva", approach_bullet4: "Aventuras y temas del mundo real", approach_bullet5: "Reportes de progreso para familias",
+          approach_quote: '"Más que una clase, es una experiencia."',
+          how_tag: "UNA CLASE EN HOLA MUNDO", how_title: "Así es la experiencia de aprendizaje", how_subtitle: "Un proceso interactivo de 5 pasos diseñado para hacer cada clase dinámica, activa y conversacional.",
+          method_illustrative_note: "* Las misiones presentadas son ejemplos conceptuales e ilustrativos de nuestra metodología gamificada.",
+          programs_tag: "SEGMENTACIÓN POR EDAD", programs_title: "Adaptado para edades de 8 a 17 años", programs_subtitle: "Agrupamos cuidadosamente a los estudiantes por edad y nivel para asegurar una experiencia interactiva idónea.",
+          age_explorers_desc: "Aprendizaje esencialmente visual y lúdico centrado en historias interactivas, personajes vibrantes, vocabulario clave y primeras interacciones.",
+          age_adventurers_desc: "Misiones por desafíos, situaciones comunicativas reales, resolución de problemas en equipo y descubrimiento cultural.",
+          age_teens_desc: "Comunicación auténtica adaptada a intereses juveniles, cultura, viajes, temas globales, conversación y autonomía.",
+          paths_tag: "RUTAS DE APRENDIZAJE", paths_title: "Dos Rutas Diferenciadas", paths_subtitle: "Tanto si tu hijo comienza desde cero como si fortalece el español de herencia familiar, tenemos la ruta adecuada.",
+          culture_title: "Descubre el español. Descubre un mundo.", culture_desc: "Explora tradiciones, geografía, gastronomía y música de México, Colombia, Perú, Argentina, Chile, Costa Rica y el Caribe.",
+          teachers_tag: "NUESTRO EQUIPO", teachers_title: "Aprende con profesores nativos de español", teachers_subtitle: "Nuestro equipo docente combina experiencia pedagógica, fluidez nativa y pasión por inspirar a estudiantes de todo el mundo.",
+          parent_tag: "TRANSPARENCIA PARA PADRES", parent_title: "Tú también ves su progreso.", parent_subtitle: "Mantenemos a las familias acompañadas. Recibirás reportes periódicos destacando los logros y áreas de crecimiento de tu hijo.",
+          parent_feat1_title: "Métricas de Comprensión y Vocabulario", parent_feat1_desc: "Seguimiento de incorporación de palabras, escucha activa y temas dominados.",
+          parent_feat2_title: "Fluidez Oral y Participación", parent_feat2_desc: "Informes claros sobre confianza al hablar, interacción y pronunciación.",
+          parent_feat3_title: "Objetivos y Próximos Desafíos", parent_feat3_desc: "Conoce los hitos alcanzados y el próximo nivel de aventura que aguarda a tu hijo.",
+          report_student_level: "Adventurers • Español de Herencia", report_status: "Progreso Excelente 🌟", report_m1: "Expresión Oral y Confianza", report_m2: "Vocabulario y Dominio Temático", report_m3: "Participación en Misiones",
+          cta_title: "¿Listos para comenzar su aventura en español?", cta_desc: "Reserva una clase de prueba gratuita y descubre cómo Hola Mundo hace que aprender español sea emocionante, natural y transformador.",
+          form_title: "Reserva una Clase de Prueba Gratuita", form_parent_name: "Nombre del Padre / Madre / Tutor *", form_parent_name_ph: "Ej. María Fernández", form_email: "Correo Electrónico *", form_email_ph: "Ej. maria.fernandez@example.com",
+          form_student_age: "Edad del Estudiante *", form_student_age_ph: "Selecciona edad...", form_country: "País de Residencia *", form_country_ph: "Ej. Suiza, Alemania, EAU...",
+          form_level: "Nivel Actual de Español *", form_level_select: "Selecciona nivel actual...", form_level_opt1: "Sin español aún (Principiante desde cero)", form_level_opt2: "Principiante (Conoce palabras básicas)", form_level_opt3: "Español básico (Comprende frases sencillas)", form_level_opt4: "Entiende español pero habla poco", form_level_opt5: "Conversacional (Entorno bilingüe o de herencia)",
+          form_why: "¿Por qué te gustaría que tu hijo aprenda español? (Opcional)", form_why_ph: "Ej. Conexión familiar, apoyo escolar, viajes futuros...",
+          form_privacy: "Acepto la Política de Privacidad y consiento ser contactado en relación a la clase de prueba.", form_submit: "Reservar Clase Gratis",
+          form_submitting: "Enviando solicitud...",
+          success_title: "¡Gracias!",
+          success_desc: "Hemos recibido tu solicitud. Nos pondremos en contacto contigo para coordinar tu clase de prueba gratuita.",
+          error_title: "Error en el envío",
+          error_desc: "No pudimos enviar tu solicitud. Inténtalo nuevamente o contáctanos por correo electrónico en ",
+          success_close: "Volver al Sitio",
+          faq_tag: "¿TIENES DUDAS?", faq_title: "Preguntas Frecuentes", faq_search_ph: "Buscar pregunta...",
+          footer_brand_desc: "Academia Online de Español para Niños y Adolescentes. Aprende español a través de aventuras en vivo, historias y conversaciones reales.",
+          footer_nav_header: "Navegación", footer_legal_header: "Legal y Privacidad", footer_contact_header: "Contacto", footer_rights: "Todos los derechos reservados.", footer_educamax_notice: "Hola Mundo es operado por EducaMax [Razón Social por completar], Chile.",
+          legal_privacy_title: "Política de Privacidad", legal_terms_title: "Términos y Condiciones", legal_cookie_title: "Política de Cookies",
+          cookie_title: "Valoramos tu privacidad 🍪", cookie_text: "Utilizamos cookies esenciales para garantizar el correcto funcionamiento del sitio web y medir la conversión de solicitudes.", cookie_accept: "Aceptar Todas", cookie_essential: "Solo Esenciales", cookie_details: "Detalles de Privacidad"
+        }
+      },
+
+      setLanguage: function(lang) {
+        if (!this.translations[lang]) return;
+        this.currentLang = lang;
+        document.documentElement.lang = lang;
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+        });
+
+        document.querySelectorAll('[data-i18n]').forEach(elem => {
+          const key = elem.getAttribute('data-i18n');
+          if (this.translations[lang][key]) {
+            if (elem.tagName === 'INPUT' || elem.tagName === 'TEXTAREA') {
+              elem.placeholder = this.translations[lang][key];
+            } else {
+              elem.textContent = this.translations[lang][key];
+            }
+          }
+        });
+
+        if (window.HOLA_APP) window.HOLA_APP.renderDynamicContent(lang);
+      }
+    };
+
+    /* 4. COOKIE CONSENT ENGINE */
+    window.HOLA_COOKIE = {
+      storageKey: 'holamundo_cookie_consent',
+      init: function() {
+        if (!localStorage.getItem(this.storageKey)) {
+          setTimeout(() => document.getElementById('cookieBanner')?.classList.add('active'), 1000);
+        }
+      },
+      acceptAll: function() {
+        localStorage.setItem(this.storageKey, JSON.stringify({ essential: true, timestamp: new Date() }));
+        document.getElementById('cookieBanner')?.classList.remove('active');
+      },
+      acceptEssential: function() {
+        localStorage.setItem(this.storageKey, JSON.stringify({ essential: true, timestamp: new Date() }));
+        document.getElementById('cookieBanner')?.classList.remove('active');
+      }
+    };
+
+    /* 5. MAIN APPLICATION CONTROLLER & REAL EMAIL SUBMISSION */
+    window.HOLA_APP = {
+      init: function() {
+        this.setupNav();
+        this.setupForms();
+        this.setupContactLinks();
+        this.renderDynamicContent(window.HOLA_I18N.currentLang);
+        window.HOLA_COOKIE.init();
+      },
+
+      setupNav: function() {
+        const navbar = document.getElementById('navbar');
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 20) navbar.style.boxShadow = "0 4px 12px rgba(0,0,0,0.05)";
+          else navbar.style.boxShadow = "none";
+        });
+
+        if (mobileToggle && navMenu) {
+          mobileToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
+          navMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navMenu.classList.remove('active')));
+        }
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          btn.addEventListener('click', function() {
+            window.HOLA_I18N.setLanguage(this.getAttribute('data-lang'));
+          });
+        });
+
+        const faqInput = document.getElementById('faqSearchInput');
+        if (faqInput) {
+          faqInput.addEventListener('input', (e) => this.filterFaqs(e.target.value.trim().toLowerCase()));
+        }
+      },
+
+      setupContactLinks: function() {
+        const container = document.getElementById('contactLinksContainer');
+        if (!container) return;
+        let html = '';
+
+        if (window.HOLA_CONFIG.CONTACT_EMAIL) {
+          html += `<li><a href="mailto:${window.HOLA_CONFIG.CONTACT_EMAIL}">📧 ${window.HOLA_CONFIG.CONTACT_EMAIL}</a></li>`;
+        }
+        if (window.HOLA_CONFIG.WHATSAPP_NUMBER) {
+          html += `<li><a href="https://wa.me/${window.HOLA_CONFIG.WHATSAPP_NUMBER}" target="_blank">💬 WhatsApp Support</a></li>`;
+        }
+        html += `<li style="font-size:0.8rem;color:#64748B;">Mon - Fri: 08:00 - 20:00 UTC</li>`;
+        container.innerHTML = html;
+      },
+
+      renderDynamicContent: function(lang) {
+        this.renderClassSteps(lang);
+        this.renderMissions(lang);
+        this.renderLearningPaths(lang);
+        this.renderTeachers(lang);
+        this.renderFaqs(lang);
+      },
+
+      renderClassSteps: function(lang) {
+        const c = document.getElementById('howItWorksStepsGrid');
+        if (!c) return;
+        c.innerHTML = window.HOLA_DATA.classSteps.map(s => `
+          <div class="class-step-card">
+            <div class="class-step-num">${s.num}</div>
+            <div class="class-step-title">${s[lang].title}</div>
+            <div class="class-step-desc">${s[lang].desc}</div>
+          </div>
+        `).join('');
+      },
+
+      renderMissions: function(lang) {
+        const c = document.getElementById('missionsGrid');
+        if (!c) return;
+        c.innerHTML = window.HOLA_DATA.sampleMissions.map(m => `
+          <div class="mission-card" onclick="HOLA_APP.openMissionModal('${m.id}')">
+            <div class="mission-img-box">
+              <img src="${m.image}" alt="${m[lang].title}" loading="lazy" />
+              <span class="age-badge-pill" style="top:0.75rem;right:0.75rem;font-size:0.75rem;">${m.tag}</span>
+            </div>
+            <div class="mission-body">
+              <div style="font-family:var(--font-heading);font-size:1.15rem;margin-bottom:0.35rem;">${m[lang].title}</div>
+              <div style="font-size:0.875rem;color:var(--text-muted);margin-bottom:1rem;">${m[lang].desc}</div>
+              <div style="font-size:0.85rem;font-weight:700;color:var(--navy-primary);display:flex;align-items:center;gap:0.35rem;">
+                <span>Explore Quest</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      },
+
+      renderLearningPaths: function(lang) {
+        const c = document.getElementById('pathsGrid');
+        if (!c) return;
+        const checkIcon = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>';
+        c.innerHTML = window.HOLA_DATA.learningPaths.map(p => `
+          <div class="path-card-large ${p.featured ? 'featured' : ''}">
+            <span style="font-size:0.8rem;font-weight:800;letter-spacing:0.05em;text-transform:uppercase;color:var(--navy-primary);margin-bottom:0.75rem;display:block;">${p[lang].badge}</span>
+            <h3 style="font-size:1.85rem;margin-bottom:0.75rem;">${p[lang].title}</h3>
+            <p style="font-size:1rem;color:var(--text-muted);margin-bottom:1.75rem;">${p[lang].subtitle}</p>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:1rem;margin-bottom:2.25rem;">
+              ${p[lang].features.map(f => `<li style="display:flex;align-items:flex-start;gap:0.75rem;font-size:0.95rem;">${checkIcon}<span>${f}</span></li>`).join('')}
+            </ul>
+            <button class="btn ${p.featured ? 'btn-yellow' : 'btn-secondary'} btn-full" onclick="HOLA_APP.openTrialModal()">
+              ${window.HOLA_I18N.translations[lang].hero_cta_primary}
+            </button>
+          </div>
+        `).join('');
+      },
+
+      renderTeachers: function(lang) {
+        const c = document.getElementById('teachersGrid');
+        if (!c) return;
+        c.innerHTML = window.HOLA_DATA.teachers.map(t => `
+          <div class="faculty-card">
+            <div class="faculty-icon-placeholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3 style="font-family:var(--font-heading);font-size:1.25rem;margin-bottom:0.25rem;">${t[lang].role}</h3>
+            <div style="font-size:0.85rem;color:var(--text-subtle);font-weight:700;margin-bottom:0.75rem;">${t[lang].region}</div>
+            <p style="font-size:0.875rem;">${t[lang].bio}</p>
+          </div>
+        `).join('');
+      },
+
+      renderFaqs: function(lang) {
+        const c = document.getElementById('faqAccordion');
+        if (!c) return;
+        c.innerHTML = window.HOLA_DATA.faqs.map(f => `
+          <div class="faq-item" id="${f.id}">
+            <button class="faq-button" onclick="HOLA_APP.toggleFaq('${f.id}')">
+              <span>${f[lang].q}</span>
+              <span style="font-family:sans-serif;font-size:1.3rem;color:var(--navy-primary);">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>${f[lang].a}</p>
+            </div>
+          </div>
+        `).join('');
+      },
+
+      toggleFaq: function(faqId) {
+        const item = document.getElementById(faqId);
+        if (!item) return;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(el => {
+          el.classList.remove('active');
+          const ans = el.querySelector('.faq-answer');
+          if (ans) ans.style.maxHeight = null;
+        });
+        if (!isActive) {
+          item.classList.add('active');
+          const ans = item.querySelector('.faq-answer');
+          if (ans) ans.style.maxHeight = ans.scrollHeight + "px";
+        }
+      },
+
+      filterFaqs: function(query) {
+        const lang = window.HOLA_I18N.currentLang;
+        window.HOLA_DATA.faqs.forEach(f => {
+          const item = document.getElementById(f.id);
+          if (!item) return;
+          const text = (f[lang].q + " " + f[lang].a).toLowerCase();
+          item.style.display = (!query || text.includes(query)) ? 'block' : 'none';
+        });
+      },
+
+      setupForms: function() {
+        document.querySelectorAll('.trial-form').forEach(form => {
+          form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            this.handleFormSubmit(form);
+          });
+        });
+      },
+
+      /* REAL EMAIL SUBMISSION VIA FORMSUBMIT AJAX API */
+      handleFormSubmit: function(formElem) {
+        const lang = window.HOLA_I18N.currentLang;
+        const submitBtn = formElem.querySelector('button[type="submit"]');
+
+        const honeypot = formElem.querySelector('[name="_honeypot"]')?.value;
+        const pName = formElem.querySelector('[name="parent_name"]')?.value.trim();
+        const email = formElem.querySelector('[name="email"]')?.value.trim();
+        const age = formElem.querySelector('[name="student_age"]')?.value;
+        const country = formElem.querySelector('[name="country"]')?.value.trim();
+        const level = formElem.querySelector('[name="spanish_level"]')?.value;
+        const why = formElem.querySelector('[name="why_learn"]')?.value.trim();
+        const privacy = formElem.querySelector('[name="privacy_consent"]')?.checked;
+
+        // Anti-spam Honeypot Check: if filled by a bot, stop submission
+        if (honeypot) {
+          console.warn("Spam submission blocked by honeypot.");
+          return;
+        }
+
+        if (!pName || !email || !age || !country || !level || !privacy) {
+          alert("Please complete all required fields and accept the privacy policy.");
+          return;
+        }
+
+        // Show loading state on button
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = window.HOLA_I18N.translations[lang].form_submitting || "Sending...";
+        }
+
+        const now = new Date();
+        const formattedTimestamp = now.toLocaleDateString() + " " + now.toLocaleTimeString();
+
+        // Construct clean payload for email delivery to educamaxcl@gmail.com
+        const payload = {
+          "_subject": window.HOLA_CONFIG.FORM_SUBJECT,
+          "_template": "table",
+          "_captcha": "false",
+          "Nombre del padre/madre/tutor": pName,
+          "Email": email,
+          "Edad del estudiante": age + " años",
+          "País": country,
+          "Nivel de español": level,
+          "Motivación": why || "No especificada",
+          "Fecha de solicitud": formattedTimestamp
+        };
+
+        // Asynchronous POST request to static form endpoint
+        fetch(window.HOLA_CONFIG.FORM_ENDPOINT, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify(payload)
+        })
+        .then(response => {
+          if (response.ok || response.status === 200) {
+            return response.json();
+          } else {
+            throw new Error("Form submission returned status " + response.status);
+          }
+        })
+        .then(data => {
+          // Success Response
+          formElem.reset();
+          this.closeModal('trialModal');
+          this.showStatusModal(true, pName, email, age, country, level);
+        })
+        .catch(error => {
+          console.error("Submission Error:", error);
+          // Fallback handling: If fetch fails or network blocked, show error with direct email mailto link
+          this.showStatusModal(false, pName, email, age, country, level);
+        })
+        .finally(() => {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = window.HOLA_I18N.translations[lang].form_submit;
+          }
+        });
+      },
+
+      /* SHOW STATUS FEEDBACK POPUP (SUCCESS / ERROR) */
+      showStatusModal: function(isSuccess, pName, email, age, country, level) {
+        const lang = window.HOLA_I18N.currentLang;
+        const iconContainer = document.getElementById('statusModalIcon');
+        const titleContainer = document.getElementById('statusModalTitle');
+        const msgContainer = document.getElementById('statusModalMessage');
+        const detailContainer = document.getElementById('statusModalDetail');
+
+        if (isSuccess) {
+          // SUCCESS STATE
+          iconContainer.style.background = "var(--teal-wash)";
+          iconContainer.style.color = "var(--teal-secondary)";
+          iconContainer.innerHTML = `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>`;
+
+          titleContainer.textContent = window.HOLA_I18N.translations[lang].success_title;
+          msgContainer.textContent = window.HOLA_I18N.translations[lang].success_desc;
+
+          detailContainer.style.display = "block";
+          detailContainer.innerHTML = `
+            <div><strong>${lang==='es'?'Solicitante:':'Applicant:'}</strong> ${pName}</div>
+            <div><strong>Email:</strong> ${email}</div>
+            <div><strong>${lang==='es'?'Edad:':'Age:'}</strong> ${age} | <strong>${lang==='es'?'País:':'Country:'}</strong> ${country}</div>
+          `;
+        } else {
+          // ERROR STATE
+          iconContainer.style.background = "#FEF2F2";
+          iconContainer.style.color = "#DC2626";
+          iconContainer.innerHTML = `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>`;
+
+          titleContainer.textContent = window.HOLA_I18N.translations[lang].error_title;
+          msgContainer.innerHTML = window.HOLA_I18N.translations[lang].error_desc + `<a href="mailto:${window.HOLA_CONFIG.CONTACT_EMAIL}" style="color:var(--navy-primary);font-weight:700;text-decoration:underline;">${window.HOLA_CONFIG.CONTACT_EMAIL}</a>.`;
+
+          detailContainer.style.display = "none";
+        }
+
+        this.openModal('statusModal');
+      },
+
+      openModal: function(id) { document.getElementById(id)?.classList.add('active'); },
+      closeModal: function(id) { document.getElementById(id)?.classList.remove('active'); },
+
+      openTrialModal: function() { this.openModal('trialModal'); },
+
+      openMissionModal: function(mId) {
+        const lang = window.HOLA_I18N.currentLang;
+        const m = window.HOLA_DATA.sampleMissions.find(x => x.id === mId);
+        if (!m) return;
+
+        document.getElementById('missionModalTitle').textContent = m[lang].title;
+        document.getElementById('missionModalBody').innerHTML = `
+          <span class="age-badge-pill" style="position:static;display:inline-block;margin-bottom:1rem;">${m.tag}</span>
+          <img src="${m.image}" style="width:100%;height:180px;object-fit:cover;border-radius:12px;margin-bottom:1rem;" />
+          <p style="font-size:0.95rem;line-height:1.6;margin-bottom:1rem;">${m[lang].details}</p>
+          <div style="background:var(--navy-light);padding:0.85rem;border-radius:var(--radius-sm);border:1px solid var(--border-light);font-size:0.85rem;color:var(--navy-primary);">
+            💡 <strong>Note:</strong> This mission is an illustrative example of our story-driven methodology.
+          </div>
+        `;
+        this.openModal('missionModal');
+      },
+
+      openLegalModal: function(docType) {
+        const lang = window.HOLA_I18N.currentLang;
+        const title = document.getElementById('legalModalTitle');
+        const body = document.getElementById('legalModalBody');
+        const legal = window.HOLA_CONFIG.LEGAL_ENTITY;
+
+        if (docType === 'privacy') {
+          title.textContent = window.HOLA_I18N.translations[lang].legal_privacy_title;
+          body.innerHTML = `
+            <div style="font-size:0.875rem;line-height:1.6;">
+              <p style="margin-bottom:0.75rem;"><strong>Privacy & Data Protection Notice</strong></p>
+              <p style="margin-bottom:0.75rem;">Hola Mundo is operated by <strong>${legal.company}</strong> (${legal.country}). Protecting minor and family privacy is our highest priority.</p>
+              <ul style="padding-left:1.25rem;margin-bottom:0.75rem;">
+                <li>Public registration forms are strictly directed to adult parents or legal guardians.</li>
+                <li>We do not collect unnecessary personal data from minors.</li>
+                <li>Data submitted is strictly used for trial class placement scheduling.</li>
+              </ul>
+              <p style="font-size:0.8rem;color:var(--text-subtle);">* Contact email: ${legal.email}</p>
+            </div>
+          `;
+        } else if (docType === 'terms') {
+          title.textContent = window.HOLA_I18N.translations[lang].legal_terms_title;
+          body.innerHTML = `
+            <div style="font-size:0.875rem;line-height:1.6;">
+              <p style="margin-bottom:0.75rem;"><strong>Terms & Conditions</strong></p>
+              <p>Hola Mundo academy platform services are operated by <strong>${legal.company}</strong> (${legal.country}). Course enrollment requires guardian consent.</p>
+            </div>
+          `;
+        } else if (docType === 'cookie') {
+          title.textContent = window.HOLA_I18N.translations[lang].legal_cookie_title;
+          body.innerHTML = `
+            <div style="font-size:0.875rem;line-height:1.6;">
+              <p>Essential cookies are used to preserve language settings and verify form registrations.</p>
+            </div>
+          `;
+        }
+        this.openModal('legalModal');
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => window.HOLA_APP.init());
+  </script>
+</body>
+</html>

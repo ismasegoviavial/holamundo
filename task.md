@@ -1,0 +1,23 @@
+# Task Checklist — Definitive Visual Redesign of Hola Mundo
+
+- [x] Implement Definitive Visual Identity & Layout in `index.html`
+  - [x] Configure Navy (`#0F172A`/`#1E3A8A`), Sun Yellow (`#F59E0B`/`#FBBF24`), Soft Teal (`#0D9488`), and Cream (`#FAF9F6`) palette
+  - [x] Embed Google Fonts CDN for `Fredoka`, `Outfit`, `Plus Jakarta Sans`, and `Caveat`
+  - [x] Redesign Header with friendly wordmark logo + "Spanish Academy for Kids & Teens" + yellow sun spark accent
+  - [x] Redesign Hero section with split layout: left adventure text + yellow CTAs, right large realistic photo of student with headphones on laptop
+  - [x] Add authentic Unsplash/Pexels lifestyle photography for Explorers (8-10), Adventurers (11-13), and Teens (14-17)
+  - [x] Create "Our Approach" section ("Classes kids look forward to") with lifestyle photo collage and handwritten quote *"More than a class, it's an experience."*
+  - [x] Create "A Class at Hola Mundo" section ("This is what learning looks like") with 5-step visual walkthrough (`01 Meet group` → `05 Progress`)
+  - [x] Update Illustrative Missions section with landscape/exploration photography and passport stamp motifs
+  - [x] Update Teachers section: *"Learn with native Spanish-speaking teachers"*
+  - [x] Update Parent section: *"You see their progress, too"* with progress mockup
+  - [x] Preserve FormSubmit AJAX email submission to `educamaxcl@gmail.com` with honeypot anti-spam
+  - [x] Preserve bilingual `EN | ES` translator engine across all new text keys
+- [x] Verification & Standalone Testing
+  - [x] Test double-clicking `index.html` locally via `file://` protocol
+  - [x] Verify photo authenticity (zero AI cartoons or 3D avatars)
+  - [x] Verify language switcher toggles between English and Spanish seamlessly
+  - [x] Verify lead capture form submission and success/error modals
+- [x] Handover
+  - [x] Deliver updated standalone `index.html` in workspace root and app directory
+  - [x] Provide walkthrough documentation with activation instructions
