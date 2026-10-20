@@ -1129,6 +1129,113 @@
         font-size: 2.2rem;
       }
     }
+
+    /* ===== FIXES: missing component styles ===== */
+    .lead-banner-title {
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      line-height: 1.2;
+      color: white;
+      margin-bottom: 1rem;
+    }
+    .lead-banner-desc {
+      color: #CBD5E1;
+      font-size: 1.1rem;
+      line-height: 1.65;
+    }
+
+    .faculty-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+    .faculty-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 2rem 1.75rem;
+      text-align: center;
+      transition: var(--transition-smooth);
+    }
+    .faculty-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+    }
+    .faculty-icon-placeholder {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--teal-wash);
+      color: var(--teal-secondary);
+      border: 2px solid var(--teal-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem auto;
+    }
+
+    /* ===== FIXES: keyboard focus ===== */
+    a:focus-visible, button:focus-visible, .mission-card:focus-visible,
+    input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 3px solid var(--yellow-sun);
+      outline-offset: 3px;
+    }
+    .mission-card { cursor: pointer; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+    }
+
+    /* ===== FIXES: tablet & mobile layout ===== */
+    @media (max-width: 1024px) {
+      .hero-grid, .approach-grid, .lead-banner-grid, .parent-grid, .paths-grid, .age-cards-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .faculty-grid { grid-template-columns: minmax(0, 1fr); max-width: 520px; margin: 0 auto; }
+      .lead-banner-title { font-size: 2rem; }
+    }
+
+    @media (max-width: 768px) {
+      :root { --header-height: 68px; }
+      .container { padding: 0 1rem; }
+      .section { padding: 3.5rem 0; }
+      .section-title { font-size: 1.9rem; }
+      .section-subtitle { font-size: 1.05rem; }
+
+      .brand-logo-main { font-size: 1.35rem; }
+      .brand-logo-sub { display: none; }
+      .nav-actions { gap: 0.75rem; }
+      .nav-actions > .btn { display: none; }   /* the sticky bottom bar carries the CTA on mobile */
+      .mobile-toggle { width: 40px; height: 40px; padding: 9px 6px; }
+      .nav-menu { gap: 1.25rem; }
+
+      .btn { white-space: normal; text-align: center; }
+      .hero { padding-top: calc(var(--header-height) + 2rem); padding-bottom: 3.5rem; }
+      .hero-title { font-size: 2.1rem; }
+      .hero-subtitle { font-size: 1.05rem; margin-bottom: 1.75rem; }
+      .hero-ctas .btn { width: 100%; }
+      .hero-photo-frame img { height: 300px; }
+      .hero-floating-badge { position: relative; left: auto; bottom: auto; margin: -1.5rem 0.75rem 0 0.75rem; max-width: none; }
+      .digital-live-badge { font-size: 0.68rem; left: 0.75rem; top: 0.75rem; }
+      .digital-reaction-badge { right: 0.75rem; top: auto; bottom: 0.75rem; }
+
+      .approach-photos { gap: 0.75rem; }
+      .lead-banner { padding: 2.25rem 1rem; }
+      .lead-banner-title { font-size: 1.75rem; }
+      .form-paper { padding: 1.5rem 1.15rem; }
+      .modal-paper { padding: 1.75rem 1.15rem; }
+      .modal-backdrop { padding: 0.75rem; }
+
+      body { padding-bottom: 72px; }          /* room for the sticky CTA bar */
+      .cookie-banner { left: 0.75rem; right: 0.75rem; bottom: 84px; padding: 1.1rem; }
+      .footer-grid { gap: 2rem; }
+    }
+
+    @media (max-width: 420px) {
+      .form-two-col { grid-template-columns: minmax(0, 1fr) !important; }
+      .footer-grid { grid-template-columns: minmax(0, 1fr); }
+    }
   </style>
 </head>
 <body>
@@ -1141,7 +1248,7 @@
         <div class="brand-logo-main">
           Hola<span>Mundo</span><span class="brand-logo-spark">✦</span>
         </div>
-        <div class="brand-logo-sub">Spanish Academy for Kids & Teens</div>
+        <div class="brand-logo-sub" data-i18n="brand_sub">Spanish Academy for Kids & Teens</div>
       </a>
 
       <!-- Navigation Menu -->
@@ -1169,7 +1276,7 @@
         </button>
 
         <!-- Mobile Drawer Toggle -->
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="navMenu">
           <span></span>
           <span></span>
           <span></span>
@@ -1232,7 +1339,7 @@
             <!-- Interactive Digital Live Session Overlays -->
             <div class="digital-live-badge">
               <span class="digital-live-dot"></span>
-              <span>LIVE SPANISH SESSION • 🟢 EN VIVO</span>
+              <span data-i18n="hero_live_badge">LIVE SPANISH CLASS</span>
             </div>
 
             <div class="digital-reaction-badge">
@@ -1295,10 +1402,10 @@
         <!-- Left: Lifestyle Photo Collage -->
         <div class="approach-photos">
           <div class="approach-photo-item">
-            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80" alt="Kid raising hand happily during online class" />
+            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80" alt="Kid raising hand happily during online class" loading="lazy" />
           </div>
           <div class="approach-photo-item" style="margin-top:2rem;">
-            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="Student smiling while talking to teacher on laptop" />
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="Student smiling while talking to teacher on laptop" loading="lazy" />
           </div>
         </div>
 
@@ -1359,7 +1466,7 @@
       <!-- Illustrative Missions -->
       <div style="margin-top:4rem;padding-top:3rem;border-top:1px solid var(--border-light);">
         <div style="margin-bottom:2rem;">
-          <h3 style="font-size:1.6rem;margin-bottom:0.35rem;">Sample Adventure Missions</h3>
+          <h3 style="font-size:1.6rem;margin-bottom:0.35rem;" data-i18n="missions_title">Sample Adventure Missions</h3>
           <p style="font-size:0.875rem;color:var(--text-subtle);" data-i18n="method_illustrative_note">
             * The missions shown below are illustrative adventure examples showcasing our gamified learning approach.
           </p>
@@ -1387,8 +1494,8 @@
         <!-- Explorers (8-10 yrs) -->
         <div class="age-card">
           <div class="age-card-img">
-            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Explorers 8-10 years learning Spanish" />
-            <span class="age-badge-pill">8–10 years</span>
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Explorers 8-10 years learning Spanish" loading="lazy" />
+            <span class="age-badge-pill" data-i18n="age_pill_1">8–10 years</span>
           </div>
           <div class="age-card-body">
             <h3 class="age-card-title">Explorers</h3>
@@ -1404,8 +1511,8 @@
         <!-- Adventurers (11-13 yrs) - PERFECTLY CENTERED PRE-TEEN IMAGE -->
         <div class="age-card">
           <div class="age-card-img">
-            <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=800&q=80" alt="Adventurers 11-13 years learning Spanish online" style="object-position: center top;" />
-            <span class="age-badge-pill">11–13 years</span>
+            <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=800&q=80" alt="Adventurers 11-13 years learning Spanish online" style="object-position: center top;" loading="lazy" />
+            <span class="age-badge-pill" data-i18n="age_pill_2">11–13 years</span>
           </div>
           <div class="age-card-body">
             <h3 class="age-card-title">Adventurers</h3>
@@ -1421,8 +1528,8 @@
         <!-- Teens (14-17 yrs) -->
         <div class="age-card">
           <div class="age-card-img">
-            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Teens 14-17 years learning Spanish" />
-            <span class="age-badge-pill">14–17 years</span>
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Teens 14-17 years learning Spanish" loading="lazy" />
+            <span class="age-badge-pill" data-i18n="age_pill_3">14–17 years</span>
           </div>
           <div class="age-card-body">
             <h3 class="age-card-title">Teens</h3>
@@ -1458,7 +1565,7 @@
   <!-- LATIN AMERICA CULTURAL DISCOVERY STRIP -->
   <section class="culture-strip">
     <div class="container" style="text-align:center;">
-      <div style="font-size:0.875rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--yellow-bright);margin-bottom:0.75rem;">
+      <div style="font-size:0.875rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--yellow-bright);margin-bottom:0.75rem;" data-i18n="culture_tag">
         LATIN AMERICAN CULTURAL EXPLORATION
       </div>
       <h2 style="font-size:2.4rem;color:white;margin-bottom:1rem;" data-i18n="culture_title">
@@ -1595,7 +1702,7 @@
                 <input type="email" name="email" class="form-input" required data-i18n="form_email_ph" placeholder="e.g. sarah.jenkins@example.com" />
               </div>
 
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+              <div class="form-two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
                 <div class="form-group">
                   <label class="form-label" data-i18n="form_student_age">Student Age *</label>
                   <select name="student_age" class="form-select" required>
@@ -1729,8 +1836,8 @@
   <!-- MOBILE STICKY CTA BAR -->
   <div class="mobile-sticky-bar" id="mobileStickyBar">
     <div style="display:flex;flex-direction:column;">
-      <span style="font-weight:800;font-size:0.875rem;">Hola Mundo Academy</span>
-      <span style="font-size:0.75rem;color:var(--text-subtle);">Free Trial Session</span>
+      <span style="font-weight:800;font-size:0.875rem;">Hola Mundo</span>
+      <span style="font-size:0.75rem;color:var(--text-subtle);" data-i18n="sticky_sub">Free trial class</span>
     </div>
     <button class="btn btn-yellow btn-sm" onclick="HOLA_APP.openTrialModal()" data-i18n="nav_book_trial">
       Book Free Trial
@@ -1745,7 +1852,7 @@
         <h3 style="font-family:var(--font-heading);font-size:1.5rem;margin-bottom:0.25rem;" data-i18n="form_title">
           Book a Free Trial Class
         </h3>
-        <p style="font-size:0.875rem;color:var(--text-subtle);">Join a live small-group placement session for your child.</p>
+        <p style="font-size:0.875rem;color:var(--text-subtle);" data-i18n="modal_trial_sub">Join a live small-group placement session for your child.</p>
       </div>
 
       <form class="trial-form">
@@ -1762,7 +1869,7 @@
           <input type="email" name="email" class="form-input" required data-i18n="form_email_ph" placeholder="e.g. sarah.jenkins@example.com" />
         </div>
 
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+        <div class="form-two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
           <div class="form-group">
             <label class="form-label" data-i18n="form_student_age">Student Age *</label>
             <select name="student_age" class="form-select" required>
@@ -1859,11 +1966,10 @@
   <div class="cookie-banner" id="cookieBanner">
     <div style="font-weight:800;font-size:0.95rem;" data-i18n="cookie_title">We value your privacy 🍪</div>
     <p style="font-size:0.825rem;color:#CBD5E1;line-height:1.5;" data-i18n="cookie_text">
-      We use essential cookies to ensure our website functions properly and to measure lead conversion performance.
+      We only store your language choice on this device. We don't use tracking or advertising cookies.
     </p>
     <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;">
-      <button class="btn btn-yellow btn-sm" onclick="HOLA_COOKIE.acceptAll()" data-i18n="cookie_accept">Accept All</button>
-      <button class="btn btn-secondary btn-sm" onclick="HOLA_COOKIE.acceptEssential()" data-i18n="cookie_essential">Essential Only</button>
+      <button class="btn btn-yellow btn-sm" onclick="HOLA_COOKIE.acceptAll()" data-i18n="cookie_accept">Got it</button>
       <a href="javascript:void(0)" onclick="HOLA_APP.openLegalModal('cookie')" style="font-size:0.775rem;color:#94A3B8;text-decoration:underline;" data-i18n="cookie_details">Privacy Details</a>
     </div>
   </div>
@@ -1913,7 +2019,7 @@
       sampleMissions: [
         { id: "m1", tag: "Explorers (8-10)", image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80", en: { title: "The Mystery of the Lost Temple", desc: "Decode Mayan riddles, practice action verbs, and navigate a jungle map.", details: "Collaborative quest using color vocabulary, direction phrases, and team clues." }, es: { title: "El Misterio del Templo Perdido", desc: "Descifra acertijos mayas, practica verbos de acción y navega por un mapa de selva.", details: "Búsqueda colaborativa usando vocabulario de colores, direcciones y pistas." } },
         { id: "m2", tag: "Adventurers (11-13)", image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80", en: { title: "Journey through the Andes", desc: "Travel across mountain peaks, order regional food, and solve challenges.", details: "Practices restaurant ordering, weather descriptions, and regional geography." }, es: { title: "Viaje a través de los Andes", desc: "Viaja por las montañas, pide comida típica y resuelve desafíos en la altura.", details: "Practica cómo pedir alimentos, describir el clima y explorar la geografía." } },
-        { id: "m3", tag: "Adventurers & Teens", image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=600&q=80", en: { title: "The Secret of the Amazon", desc: "Investigate biodiversity findings and interview local rainforest guides in Spanish.", details: "Focuses on environmental vocabulary, asking questions, and expressing opinions." }, es: { title: "El Secreto del Amazonas", desc: "Investiga la biodiversidad y entrevista a guías de la selva en español.", details: "Enfoque en vocabulario ambiental, preguntas y expresión de opiniones." } },
+        { id: "m3", tag: "Adventurers & Teens", tag_es: "Adventurers y Teens", image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=600&q=80", en: { title: "The Secret of the Amazon", desc: "Investigate biodiversity findings and interview local rainforest guides in Spanish.", details: "Focuses on environmental vocabulary, asking questions, and expressing opinions." }, es: { title: "El Secreto del Amazonas", desc: "Investiga la biodiversidad y entrevista a guías de la selva en español.", details: "Enfoque en vocabulario ambiental, preguntas y expresión de opiniones." } },
         { id: "m4", tag: "Teens (14-17)", image: "https://images.unsplash.com/photo-1512813195386-6cf811ad3542?auto=format&fit=crop&w=600&q=80", en: { title: "A Mission in Mexico", desc: "Uncover culinary traditions, plan a festival budget, and debate local legends.", details: "Advanced conversational project building spontaneous speech and nuance." }, es: { title: "Una Misión en México", desc: "Descubre tradiciones culinarias, organiza un festival y debate leyendas.", details: "Proyecto conversacional avanzado para desarrollar espontaneidad y matices." } }
       ],
 
@@ -1992,6 +2098,11 @@
       currentLang: 'en',
       translations: {
         en: {
+          brand_sub: "Spanish Academy for Kids & Teens", hero_live_badge: "LIVE SPANISH CLASS", missions_title: "Sample Adventure Missions", mission_cta: "Explore mission", mission_note: "This mission is an illustrative example of our story-driven methodology.", note_label: "Note:",
+          age_pill_1: "8–10 years", age_pill_2: "11–13 years", age_pill_3: "14–17 years", years: "years",
+          culture_tag: "LATIN AMERICAN CULTURAL EXPLORATION", sticky_sub: "Free trial class", modal_trial_sub: "Join a live small-group placement session for your child.",
+          contact_hours: "Mon – Fri: 08:00 – 20:00 UTC", form_incomplete: "Please complete all required fields and accept the privacy policy.",
+          applicant: "Applicant:", age_label: "Age:", country_label: "Country:",
           nav_how_it_works: "How it works", nav_programs: "Programs", nav_our_approach: "Our approach", nav_for_parents: "For parents", nav_faq: "FAQ", nav_book_trial: "Book a Free Trial",
           hero_badge: "✨ Online Spanish Academy for Kids & Teens", hero_title_1: "Spanish becomes an ", hero_title_2: "adventure.",
           hero_subtitle: "Live online Spanish classes for kids and teens ages 8–17. Small groups, native teachers and real conversations.",
@@ -2032,10 +2143,15 @@
           footer_brand_desc: "Online Spanish Academy for Kids & Teens. Learn Spanish through live adventures, stories, and real conversations.",
           footer_nav_header: "Navigation", footer_legal_header: "Legal & Privacy", footer_contact_header: "Contact", footer_rights: "All rights reserved.", footer_educamax_notice: "Hola Mundo is operated by EducaMax [Razón Social por completar], Chile.",
           legal_privacy_title: "Privacy Policy", legal_terms_title: "Terms & Conditions", legal_cookie_title: "Cookie Policy",
-          cookie_title: "We value your privacy 🍪", cookie_text: "We use essential cookies to ensure our website functions properly and to measure lead conversion performance.", cookie_accept: "Accept All", cookie_essential: "Essential Only", cookie_details: "Privacy Details"
+          cookie_title: "We value your privacy 🍪", cookie_text: "We only store your language choice on this device. We don\'t use tracking or advertising cookies.", cookie_accept: "Got it", cookie_essential: "Essential Only", cookie_details: "Privacy Details"
         },
 
         es: {
+          brand_sub: "Academia de español para niños y adolescentes", hero_live_badge: "CLASE DE ESPAÑOL EN VIVO", missions_title: "Ejemplos de misiones", mission_cta: "Ver misión", mission_note: "Esta misión es un ejemplo ilustrativo de nuestra metodología basada en historias.", note_label: "Nota:",
+          age_pill_1: "8–10 años", age_pill_2: "11–13 años", age_pill_3: "14–17 años", years: "años",
+          culture_tag: "EXPLORACIÓN CULTURAL LATINOAMERICANA", sticky_sub: "Clase de prueba gratis", modal_trial_sub: "Únete a una sesión grupal en vivo para conocer el nivel de tu hijo.",
+          contact_hours: "Lun – Vie: 08:00 – 20:00 UTC", form_incomplete: "Completa todos los campos obligatorios y acepta la política de privacidad.",
+          applicant: "Solicitante:", age_label: "Edad:", country_label: "País:",
           nav_how_it_works: "Cómo funciona", nav_programs: "Programas", nav_our_approach: "Nuestra metodología", nav_for_parents: "Para padres", nav_faq: "Preguntas frecuentes", nav_book_trial: "Reserva una clase de prueba",
           hero_badge: "✨ Academia de Español Online 100% en Vivo", hero_title_1: "El español se convierte en una ", hero_title_2: "aventura.",
           hero_subtitle: "Clases de español online en vivo para niños y adolescentes de 8 a 17 años. Grupos reducidos, profesores nativos y conversaciones reales.",
@@ -2076,7 +2192,7 @@
           footer_brand_desc: "Academia Online de Español para Niños y Adolescentes. Aprende español a través de aventuras en vivo, historias y conversaciones reales.",
           footer_nav_header: "Navegación", footer_legal_header: "Legal y Privacidad", footer_contact_header: "Contacto", footer_rights: "Todos los derechos reservados.", footer_educamax_notice: "Hola Mundo es operado por EducaMax [Razón Social por completar], Chile.",
           legal_privacy_title: "Política de Privacidad", legal_terms_title: "Términos y Condiciones", legal_cookie_title: "Política de Cookies",
-          cookie_title: "Valoramos tu privacidad 🍪", cookie_text: "Utilizamos cookies esenciales para garantizar el correcto funcionamiento del sitio web y medir la conversión de solicitudes.", cookie_accept: "Aceptar Todas", cookie_essential: "Solo Esenciales", cookie_details: "Detalles de Privacidad"
+          cookie_title: "Valoramos tu privacidad 🍪", cookie_text: "Solo guardamos tu elección de idioma en este dispositivo. No usamos cookies de seguimiento ni publicidad.", cookie_accept: "Entendido", cookie_essential: "Solo Esenciales", cookie_details: "Detalles de Privacidad"
         }
       },
 
@@ -2100,24 +2216,54 @@
           }
         });
 
-        if (window.HOLA_APP) window.HOLA_APP.renderDynamicContent(lang);
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          btn.setAttribute('aria-pressed', btn.getAttribute('data-lang') === lang ? 'true' : 'false');
+        });
+
+        // age options ("8 years" / "8 años")
+        document.querySelectorAll('select[name="student_age"] option').forEach(o => {
+          if (o.value) o.textContent = o.value + ' ' + this.translations[lang].years;
+        });
+
+        // remember the choice on this device
+        try { localStorage.setItem('holamundo_lang', lang); } catch (e) {}
+
+        if (window.HOLA_APP) {
+          window.HOLA_APP.renderDynamicContent(lang);
+          window.HOLA_APP.setupContactLinks();
+        }
+      },
+
+      detectLanguage: function() {
+        let saved = null;
+        try { saved = localStorage.getItem('holamundo_lang'); } catch (e) {}
+        if (saved && this.translations[saved]) return saved;
+        const nav = (navigator.language || 'en').toLowerCase();
+        return nav.startsWith('es') ? 'es' : 'en';
       }
+    };
+
+    /* HTML escaping for user-provided text shown back on the page */
+    window.HOLA_ESC = function(str) {
+      return String(str ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     };
 
     /* 4. COOKIE CONSENT ENGINE */
     window.HOLA_COOKIE = {
       storageKey: 'holamundo_cookie_consent',
       init: function() {
-        if (!localStorage.getItem(this.storageKey)) {
+        let stored = null;
+        try { stored = localStorage.getItem(this.storageKey); } catch (e) {}
+        if (!stored) {
           setTimeout(() => document.getElementById('cookieBanner')?.classList.add('active'), 1000);
         }
       },
       acceptAll: function() {
-        localStorage.setItem(this.storageKey, JSON.stringify({ essential: true, timestamp: new Date() }));
+        try { localStorage.setItem(this.storageKey, JSON.stringify({ essential: true, timestamp: new Date() })); } catch (e) {}
         document.getElementById('cookieBanner')?.classList.remove('active');
       },
       acceptEssential: function() {
-        localStorage.setItem(this.storageKey, JSON.stringify({ essential: true, timestamp: new Date() }));
+        try { localStorage.setItem(this.storageKey, JSON.stringify({ essential: true, timestamp: new Date() })); } catch (e) {}
         document.getElementById('cookieBanner')?.classList.remove('active');
       }
     };
@@ -2127,8 +2273,8 @@
       init: function() {
         this.setupNav();
         this.setupForms();
-        this.setupContactLinks();
-        this.renderDynamicContent(window.HOLA_I18N.currentLang);
+        this.setupModals();
+        window.HOLA_I18N.setLanguage(window.HOLA_I18N.detectLanguage());
         window.HOLA_COOKIE.init();
       },
 
@@ -2143,8 +2289,14 @@
         });
 
         if (mobileToggle && navMenu) {
-          mobileToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
-          navMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navMenu.classList.remove('active')));
+          mobileToggle.addEventListener('click', () => {
+            const open = navMenu.classList.toggle('active');
+            mobileToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          });
+          navMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+          }));
         }
 
         document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -2159,6 +2311,18 @@
         }
       },
 
+      setupModals: function() {
+        // Esc closes the open modal; a click on the dark backdrop closes it too
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            document.querySelectorAll('.modal-backdrop.active').forEach(m => this.closeModal(m.id));
+          }
+        });
+        document.querySelectorAll('.modal-backdrop').forEach(m => {
+          m.addEventListener('click', (e) => { if (e.target === m) this.closeModal(m.id); });
+        });
+      },
+
       setupContactLinks: function() {
         const container = document.getElementById('contactLinksContainer');
         if (!container) return;
@@ -2170,7 +2334,7 @@
         if (window.HOLA_CONFIG.WHATSAPP_NUMBER) {
           html += `<li><a href="https://wa.me/${window.HOLA_CONFIG.WHATSAPP_NUMBER}" target="_blank">💬 WhatsApp Support</a></li>`;
         }
-        html += `<li style="font-size:0.8rem;color:#64748B;">Mon - Fri: 08:00 - 20:00 UTC</li>`;
+        html += `<li style="font-size:0.8rem;color:#64748B;">${window.HOLA_I18N.translations[window.HOLA_I18N.currentLang].contact_hours}</li>`;
         container.innerHTML = html;
       },
 
@@ -2198,16 +2362,16 @@
         const c = document.getElementById('missionsGrid');
         if (!c) return;
         c.innerHTML = window.HOLA_DATA.sampleMissions.map(m => `
-          <div class="mission-card" onclick="HOLA_APP.openMissionModal('${m.id}')">
+          <div class="mission-card" role="button" tabindex="0" onclick="HOLA_APP.openMissionModal('${m.id}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();HOLA_APP.openMissionModal('${m.id}');}">
             <div class="mission-img-box">
               <img src="${m.image}" alt="${m[lang].title}" loading="lazy" />
-              <span class="age-badge-pill" style="top:0.75rem;right:0.75rem;font-size:0.75rem;">${m.tag}</span>
+              <span class="age-badge-pill" style="top:0.75rem;right:0.75rem;font-size:0.75rem;">${(lang === 'es' && m.tag_es) || m.tag}</span>
             </div>
             <div class="mission-body">
               <div style="font-family:var(--font-heading);font-size:1.15rem;margin-bottom:0.35rem;">${m[lang].title}</div>
               <div style="font-size:0.875rem;color:var(--text-muted);margin-bottom:1rem;">${m[lang].desc}</div>
               <div style="font-size:0.85rem;font-weight:700;color:var(--navy-primary);display:flex;align-items:center;gap:0.35rem;">
-                <span>Explore Quest</span>
+                <span>${window.HOLA_I18N.translations[lang].mission_cta}</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </div>
             </div>
@@ -2254,7 +2418,7 @@
         if (!c) return;
         c.innerHTML = window.HOLA_DATA.faqs.map(f => `
           <div class="faq-item" id="${f.id}">
-            <button class="faq-button" onclick="HOLA_APP.toggleFaq('${f.id}')">
+            <button class="faq-button" aria-expanded="false" onclick="HOLA_APP.toggleFaq('${f.id}')">
               <span>${f[lang].q}</span>
               <span style="font-family:sans-serif;font-size:1.3rem;color:var(--navy-primary);">+</span>
             </button>
@@ -2271,11 +2435,13 @@
         const isActive = item.classList.contains('active');
         document.querySelectorAll('.faq-item').forEach(el => {
           el.classList.remove('active');
+          el.querySelector('.faq-button')?.setAttribute('aria-expanded', 'false');
           const ans = el.querySelector('.faq-answer');
           if (ans) ans.style.maxHeight = null;
         });
         if (!isActive) {
           item.classList.add('active');
+          item.querySelector('.faq-button')?.setAttribute('aria-expanded', 'true');
           const ans = item.querySelector('.faq-answer');
           if (ans) ans.style.maxHeight = ans.scrollHeight + "px";
         }
@@ -2321,7 +2487,7 @@
         }
 
         if (!pName || !email || !age || !country || !level || !privacy) {
-          alert("Please complete all required fields and accept the privacy policy.");
+          alert(window.HOLA_I18N.translations[lang].form_incomplete);
           return;
         }
 
@@ -2390,6 +2556,8 @@
         const titleContainer = document.getElementById('statusModalTitle');
         const msgContainer = document.getElementById('statusModalMessage');
         const detailContainer = document.getElementById('statusModalDetail');
+        const t = window.HOLA_I18N.translations[lang];
+        const esc = window.HOLA_ESC;
 
         if (isSuccess) {
           // SUCCESS STATE
@@ -2402,9 +2570,9 @@
 
           detailContainer.style.display = "block";
           detailContainer.innerHTML = `
-            <div><strong>${lang==='es'?'Solicitante:':'Applicant:'}</strong> ${pName}</div>
-            <div><strong>Email:</strong> ${email}</div>
-            <div><strong>${lang==='es'?'Edad:':'Age:'}</strong> ${age} | <strong>${lang==='es'?'País:':'Country:'}</strong> ${country}</div>
+            <div><strong>${t.applicant}</strong> ${esc(pName)}</div>
+            <div><strong>Email:</strong> ${esc(email)}</div>
+            <div><strong>${t.age_label}</strong> ${esc(age)} | <strong>${t.country_label}</strong> ${esc(country)}</div>
           `;
         } else {
           // ERROR STATE
@@ -2433,11 +2601,11 @@
 
         document.getElementById('missionModalTitle').textContent = m[lang].title;
         document.getElementById('missionModalBody').innerHTML = `
-          <span class="age-badge-pill" style="position:static;display:inline-block;margin-bottom:1rem;">${m.tag}</span>
-          <img src="${m.image}" style="width:100%;height:180px;object-fit:cover;border-radius:12px;margin-bottom:1rem;" />
+          <span class="age-badge-pill" style="position:static;display:inline-block;margin-bottom:1rem;">${(lang === 'es' && m.tag_es) || m.tag}</span>
+          <img src="${m.image}" alt="${m[lang].title}" style="width:100%;height:180px;object-fit:cover;border-radius:12px;margin-bottom:1rem;" />
           <p style="font-size:0.95rem;line-height:1.6;margin-bottom:1rem;">${m[lang].details}</p>
           <div style="background:var(--navy-light);padding:0.85rem;border-radius:var(--radius-sm);border:1px solid var(--border-light);font-size:0.85rem;color:var(--navy-primary);">
-            💡 <strong>Note:</strong> This mission is an illustrative example of our story-driven methodology.
+            💡 <strong>${window.HOLA_I18N.translations[lang].note_label}</strong> ${window.HOLA_I18N.translations[lang].mission_note}
           </div>
         `;
         this.openModal('missionModal');
@@ -2449,10 +2617,21 @@
         const body = document.getElementById('legalModalBody');
         const legal = window.HOLA_CONFIG.LEGAL_ENTITY;
 
+        const es = lang === 'es';
+        const wrap = (html) => `<div style="font-size:0.875rem;line-height:1.6;">${html}</div>`;
+
         if (docType === 'privacy') {
           title.textContent = window.HOLA_I18N.translations[lang].legal_privacy_title;
-          body.innerHTML = `
-            <div style="font-size:0.875rem;line-height:1.6;">
+          body.innerHTML = wrap(es ? `
+              <p style="margin-bottom:0.75rem;"><strong>Aviso de privacidad y protección de datos</strong></p>
+              <p style="margin-bottom:0.75rem;">Hola Mundo es operado por <strong>${legal.company}</strong> (${legal.country}). Proteger la privacidad de los menores y sus familias es nuestra prioridad.</p>
+              <ul style="padding-left:1.25rem;margin-bottom:0.75rem;">
+                <li>Los formularios de inscripción están dirigidos exclusivamente a padres, madres o tutores legales adultos.</li>
+                <li>No recopilamos datos personales innecesarios de menores.</li>
+                <li>Los datos enviados se usan únicamente para coordinar la clase de prueba.</li>
+              </ul>
+              <p style="font-size:0.8rem;color:var(--text-subtle);">* Correo de contacto: ${legal.email}</p>
+            ` : `
               <p style="margin-bottom:0.75rem;"><strong>Privacy & Data Protection Notice</strong></p>
               <p style="margin-bottom:0.75rem;">Hola Mundo is operated by <strong>${legal.company}</strong> (${legal.country}). Protecting minor and family privacy is our highest priority.</p>
               <ul style="padding-left:1.25rem;margin-bottom:0.75rem;">
@@ -2461,23 +2640,21 @@
                 <li>Data submitted is strictly used for trial class placement scheduling.</li>
               </ul>
               <p style="font-size:0.8rem;color:var(--text-subtle);">* Contact email: ${legal.email}</p>
-            </div>
-          `;
+            `);
         } else if (docType === 'terms') {
           title.textContent = window.HOLA_I18N.translations[lang].legal_terms_title;
-          body.innerHTML = `
-            <div style="font-size:0.875rem;line-height:1.6;">
+          body.innerHTML = wrap(es ? `
+              <p style="margin-bottom:0.75rem;"><strong>Términos y Condiciones</strong></p>
+              <p>Los servicios de la academia Hola Mundo son operados por <strong>${legal.company}</strong> (${legal.country}). La inscripción en los cursos requiere el consentimiento del padre, madre o tutor.</p>
+            ` : `
               <p style="margin-bottom:0.75rem;"><strong>Terms & Conditions</strong></p>
               <p>Hola Mundo academy platform services are operated by <strong>${legal.company}</strong> (${legal.country}). Course enrollment requires guardian consent.</p>
-            </div>
-          `;
+            `);
         } else if (docType === 'cookie') {
           title.textContent = window.HOLA_I18N.translations[lang].legal_cookie_title;
-          body.innerHTML = `
-            <div style="font-size:0.875rem;line-height:1.6;">
-              <p>Essential cookies are used to preserve language settings and verify form registrations.</p>
-            </div>
-          `;
+          body.innerHTML = wrap(es
+            ? `<p>Este sitio solo guarda en tu navegador tu elección de idioma y que ya viste el aviso de cookies. No usamos cookies de seguimiento, analítica ni publicidad.</p>`
+            : `<p>This site only stores your language choice and that you've seen the cookie notice in your browser. We don't use tracking, analytics or advertising cookies.</p>`);
         }
         this.openModal('legalModal');
       }
