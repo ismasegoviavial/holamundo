@@ -1,0 +1,10 @@
+# Notas de trabajo de herramientas de IA (se quedan en tu computador, no se suben)
+implementation_plan.md
+task.md
+walkthrough.md
+*.metadata.json
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
