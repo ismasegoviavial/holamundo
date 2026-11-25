@@ -13,7 +13,22 @@
 
   <!-- Open Graph / Social Media Meta -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://holamundo.academy/">
+  <meta property="og:url" content="https://ismasegoviavial.github.io/holamundo/">
+  <meta property="og:site_name" content="Hola Mundo">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:image" content="https://ismasegoviavial.github.io/holamundo/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Hola Mundo – Online Spanish Academy for Kids & Teens">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://ismasegoviavial.github.io/holamundo/og-image.jpg">
+
+  <!-- Language versions: same page, Spanish via ?lang=es -->
+  <link rel="canonical" href="https://ismasegoviavial.github.io/holamundo/" id="canonicalLink">
+  <link rel="alternate" hreflang="en" href="https://ismasegoviavial.github.io/holamundo/">
+  <link rel="alternate" hreflang="es" href="https://ismasegoviavial.github.io/holamundo/?lang=es">
+  <link rel="alternate" hreflang="x-default" href="https://ismasegoviavial.github.io/holamundo/">
   <meta property="og:title" content="Hola Mundo | Online Spanish Academy for Kids & Teens">
   <meta property="og:description" content="Spanish becomes an adventure. Live online Spanish classes where kids and teens explore, speak, play and discover the Spanish-speaking world.">
 
@@ -29,7 +44,15 @@
     "@type": "EducationalOrganization",
     "name": "Hola Mundo",
     "description": "Online Spanish Academy for Kids & Teens (Ages 8-17)",
-    "url": "https://holamundo.academy",
+    "url": "https://ismasegoviavial.github.io/holamundo/",
+    "inLanguage": ["en", "es"],
+    "offers": {
+      "@type": "Offer",
+      "name": "Monthly subscription",
+      "price": "100",
+      "priceCurrency": "USD",
+      "description": "2 live 60-minute Spanish classes per week in small groups"
+    },
     "areaServed": "Worldwide",
     "educationalCredentialAwarded": "Certificate of Spanish Progress"
   }
@@ -770,6 +793,28 @@
       box-shadow: 0 10px 30px rgba(245, 158, 11, 0.12);
     }
 
+    /* PRICING */
+    .price-card {
+      max-width: 460px;
+      margin: 0 auto;
+      background: white;
+      border: 2px solid var(--yellow-sun);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 10px 30px rgba(245, 158, 11, 0.12);
+      padding: 2.5rem 2.25rem;
+      text-align: left;
+    }
+    .price-card-name { font-weight: 800; color: var(--teal-secondary); text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.85rem; margin-bottom: 0.5rem; }
+    .price-amount { display: flex; align-items: baseline; gap: 0.35rem; color: var(--navy-primary); margin-bottom: 1.75rem; }
+    .price-currency { font-weight: 800; font-size: 1.25rem; }
+    .price-value { font-family: var(--font-heading); font-size: 3.5rem; line-height: 1; font-weight: 700; }
+    .price-period { font-size: 1.05rem; color: var(--text-subtle); font-weight: 600; }
+    .price-features { list-style: none; display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 2rem; padding: 0; }
+    .price-features li { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.975rem; }
+    .price-features svg { flex-shrink: 0; color: var(--teal-secondary); margin-top: 2px; }
+    .price-note { font-size: 0.85rem; color: var(--text-subtle); text-align: center; margin-top: 1rem; }
+    @media (max-width: 768px) { .price-card { padding: 2rem 1.25rem; } .price-value { font-size: 3rem; } }
+
     /* ILLUSTRATIVE MISSIONS */
     .missions-grid {
       display: grid;
@@ -905,6 +950,43 @@
       gap: 0.65rem;
       margin-bottom: 1.25rem;
     }
+
+    .form-error {
+      background: #FEF2F2;
+      border: 1px solid #FCA5A5;
+      color: #B91C1C;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 10px;
+      padding: 0.65rem 0.9rem;
+      margin-bottom: 1rem;
+    }
+    .form-error[hidden] { display: none; }
+    .class-format-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+      background: var(--teal-wash);
+      border: 1px solid var(--teal-border);
+      color: var(--navy-primary);
+      font-weight: 700;
+      font-size: 0.95rem;
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+    }
+
+    .form-notice {
+      font-size: 0.75rem;
+      line-height: 1.5;
+      color: var(--text-subtle);
+      margin: -0.5rem 0 1.25rem 0;
+    }
+    .form-notice a { color: var(--navy-primary); text-decoration: underline; font-weight: 700; }
+    .legal-doc h4 { font-size: 0.95rem; margin: 1.25rem 0 0.4rem 0; }
+    .legal-doc p, .legal-doc li { font-size: 0.875rem; line-height: 1.6; }
+    .legal-doc ul { padding-left: 1.25rem; margin-bottom: 0.5rem; }
+    .legal-doc .legal-meta { font-size: 0.8rem; color: var(--text-subtle); margin-bottom: 0.75rem; }
 
     .form-checkbox {
       width: 18px;
@@ -1258,6 +1340,7 @@
           <li><a href="#programs" class="nav-link" data-i18n="nav_programs">Programs</a></li>
           <li><a href="#our-approach" class="nav-link" data-i18n="nav_our_approach">Our approach</a></li>
           <li><a href="#for-parents" class="nav-link" data-i18n="nav_for_parents">For parents</a></li>
+          <li><a href="#pricing" class="nav-link" data-i18n="nav_pricing">Pricing</a></li>
           <li><a href="#faq" class="nav-link" data-i18n="nav_faq">FAQ</a></li>
         </ul>
       </nav>
@@ -1488,6 +1571,7 @@
         <p class="section-subtitle" data-i18n="programs_subtitle">
           We group students carefully by both age group and Spanish level to ensure comfortable, age-appropriate interactions.
         </p>
+        <div><span class="class-format-pill">🕒 <span data-i18n="class_format">Live classes: 60 minutes, twice a week</span></span></div>
       </div>
 
       <div class="age-cards-grid">
@@ -1671,6 +1755,31 @@
   </section>
 
   <!-- LEAD CTA SECTION -->
+  <!-- PRICING -->
+  <section class="section section-border-top" id="pricing">
+    <div class="container">
+      <div class="text-center" style="max-width:720px;margin:0 auto 3rem auto;">
+        <span class="section-tag" data-i18n="price_tag">PRICING</span>
+        <h2 class="section-title" data-i18n="price_title">One simple plan</h2>
+        <p class="section-subtitle" data-i18n="price_subtitle">A monthly subscription that works for either of our two programs.</p>
+      </div>
+      <div class="price-card">
+        <div class="price-card-name" data-i18n="price_name">Monthly subscription</div>
+        <div class="price-amount"><span class="price-currency">USD</span> <span class="price-value">100</span><span class="price-period" data-i18n="price_period">/ month</span></div>
+        <ul class="price-features">
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="price_feat1"></span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="price_feat2"></span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="price_feat3"></span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="price_feat4"></span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="price_feat5"></span></li>
+        </ul>
+        <button class="btn btn-yellow btn-full" onclick="HOLA_APP.openTrialModal()" data-i18n="price_cta">Book a free trial class</button>
+        <p class="price-note" data-i18n="price_note">The first trial class is free. Afterwards, we'll tell you how to enroll.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOK TRIAL -->
   <section class="section section-border-top" id="book-trial">
     <div class="container">
       <div class="lead-banner">
@@ -1750,6 +1859,7 @@
                 </label>
               </div>
 
+              <p class="form-notice"><span data-i18n="form_notice">Educamax Ltda will use this data only to arrange the free trial class. You can access, correct or delete it at any time.</span> <a href="#privacy" onclick="event.preventDefault();HOLA_APP.openLegalModal('privacy')" data-i18n="form_notice_link">Read the Privacy Policy</a></p>
               <button type="submit" class="btn btn-yellow btn-full" data-i18n="form_submit">
                 Reserve Free Trial
               </button>
@@ -1801,6 +1911,7 @@
             <li><a href="#programs" data-i18n="nav_programs">Programs</a></li>
             <li><a href="#our-approach" data-i18n="nav_our_approach">Our approach</a></li>
             <li><a href="#for-parents" data-i18n="nav_for_parents">For parents</a></li>
+            <li><a href="#pricing" data-i18n="nav_pricing">Pricing</a></li>
             <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
           </ul>
         </div>
@@ -1827,7 +1938,7 @@
           &copy; 2026 Hola Mundo. <span data-i18n="footer_rights">All rights reserved.</span>
         </div>
         <div style="color:#64748B;" data-i18n="footer_educamax_notice">
-          Hola Mundo is operated by EducaMax [Razón Social por completar], Chile.
+          Hola Mundo is operated by Educamax Ltda (RUT 77.912.943-8), Chile.
         </div>
       </div>
     </div>
@@ -1917,6 +2028,7 @@
           </label>
         </div>
 
+        <p class="form-notice"><span data-i18n="form_notice">Educamax Ltda will use this data only to arrange the free trial class. You can access, correct or delete it at any time.</span> <a href="#privacy" onclick="event.preventDefault();HOLA_APP.openLegalModal('privacy')" data-i18n="form_notice_link">Read the Privacy Policy</a></p>
         <button type="submit" class="btn btn-yellow btn-full" data-i18n="form_submit">
           Reserve Free Trial
         </button>
@@ -1992,16 +2104,20 @@
 
       // Legal Operating Entity Details
       LEGAL_ENTITY: {
-        company: "EducaMax SpA",
+        company: "Educamax Ltda",
         country: "Chile",
-        details: "[Razón Social EducaMax SpA / por completar]",
-        email: "educamaxcl@gmail.com"
+        details: "Educamax Ltda",
+        rut: "77.912.943-8",
+        email: "educamaxcl@gmail.com",
+        retentionMonths: 12,                 // plazo propuesto: revisar con asesoría legal
+        policyVersion: "1.0",
+        policyUpdated: { es: "25 de noviembre de 2026", en: "November 25, 2026" }
       },
 
       // Feature Flags
       featureFlags: {
         showTestimonials: false,
-        showPricing: false,      
+        showPricing: true,      
         enablePayments: false    
       }
     };
@@ -2085,6 +2201,8 @@
       faqs: [
         { id: "faq-1", en: { q: "Does my child need to know Spanish already?", a: "No! We welcome complete beginners as well as students with prior exposure. We offer two distinct learning paths and group students by age and proficiency." }, es: { q: "¿Mi hijo necesita saber español previamente?", a: "¡No! Recibimos a estudiantes desde cero absoluto y a quienes ya tienen contacto previo. Ofrecemos dos rutas diferenciadas organizadas por edad y nivel." } },
         { id: "faq-2", en: { q: "How are students grouped?", a: "Groups are carefully balanced considering both student age (Explorers 8-10, Adventurers 11-13, Teens 14-17) and current Spanish level to ensure an optimal social fit." }, es: { q: "¿Cómo se agrupan los estudiantes?", a: "Los grupos se organizan equilibrando cuidadosamente la edad (Explorers 8-10, Adventurers 11-13, Teens 14-17) y el nivel actual de español." } },
+        { id: "faq-8", en: { q: "How long are the classes and how often?", a: "Each class lasts 60 minutes, and students meet twice a week with their group and teacher." }, es: { q: "¿Cuánto duran las clases y con qué frecuencia?", a: "Cada clase dura 60 minutos y los estudiantes se reúnen dos veces por semana con su grupo y su profesor." } },
+        { id: "faq-9", en: { q: "How much does it cost?", a: "USD 100 per month, which includes 2 live 60-minute classes a week. The first trial class is free." }, es: { q: "¿Cuánto cuesta?", a: "USD 100 al mes, con 2 clases en vivo de 60 minutos por semana. La primera clase de prueba es gratis." } },
         { id: "faq-3", en: { q: "Are classes live?", a: "Yes! All Hola Mundo classes are 100% online and live, featuring real-time teacher guidance and active peer interaction in small groups." }, es: { q: "¿Las clases son en vivo?", a: "¡Sí! Todas las clases de Hola Mundo son 100 % online y en vivo, guiadas en tiempo real por profesores y con interacción entre compañeros." } },
         { id: "faq-4", en: { q: "Are classes individual or group-based?", a: "Our core academy framework is based on small-group live learning. Small groups foster rich peer communication, collaborative mission solving, and dynamic fun." }, es: { q: "¿Las clases son individuales o grupales?", a: "Nuestro programa se basa en el aprendizaje en vivo en grupos reducidos para fomentar la comunicación entre pares y la resolución de misiones." } },
         { id: "faq-5", en: { q: "Where are the teachers from?", a: "All of our teachers are native Spanish speakers from Latin America, bringing educational expertise, warmth, and rich cultural diversity to every live lesson." }, es: { q: "¿De dónde son los profesores?", a: "Todos nuestros profesores son hablantes nativos de español de Latinoamérica, aportando calidez, profesionalismo y diversidad cultural." } },
@@ -2103,6 +2221,11 @@
           culture_tag: "LATIN AMERICAN CULTURAL EXPLORATION", sticky_sub: "Free trial class", modal_trial_sub: "Join a live small-group placement session for your child.",
           contact_hours: "Mon – Fri: 08:00 – 20:00 UTC", form_incomplete: "Please complete all required fields and accept the privacy policy.",
           applicant: "Applicant:", age_label: "Age:", country_label: "Country:",
+          nav_pricing: "Pricing", price_tag: "PRICING", price_title: "One simple plan", price_subtitle: "A monthly subscription that works for either of our two programs.", price_name: "Monthly subscription", price_period: "/ month",
+          price_feat1: "2 live classes a week, 60 minutes each", price_feat2: "Small groups by age and Spanish level", price_feat3: "Native Spanish teachers from Latin America", price_feat4: "Regular progress reports for parents", price_feat5: "Spanish as a New Language or Heritage Spanish",
+          price_cta: "Book a free trial class", price_note: "The first trial class is free. Afterwards, we'll tell you how to enroll.",
+          class_format: "Live classes: 60 minutes, twice a week", meta_title: "Hola Mundo | Online Spanish Academy for Kids & Teens (Ages 8-17)", meta_description: "Live online Spanish classes for kids and teens ages 8-17: 60-minute small-group classes twice a week with native Latin American teachers. Book a free trial class.",
+          form_notice: "Educamax Ltda will use this data only to arrange the free trial class. You can access, correct or delete it at any time.", form_notice_link: "Read the Privacy Policy",
           nav_how_it_works: "How it works", nav_programs: "Programs", nav_our_approach: "Our approach", nav_for_parents: "For parents", nav_faq: "FAQ", nav_book_trial: "Book a Free Trial",
           hero_badge: "✨ Online Spanish Academy for Kids & Teens", hero_title_1: "Spanish becomes an ", hero_title_2: "adventure.",
           hero_subtitle: "Live online Spanish classes for kids and teens ages 8–17. Small groups, native teachers and real conversations.",
@@ -2141,7 +2264,7 @@
           success_close: "Back to Website",
           faq_tag: "GOT QUESTIONS?", faq_title: "Frequently Asked Questions", faq_search_ph: "Search questions...",
           footer_brand_desc: "Online Spanish Academy for Kids & Teens. Learn Spanish through live adventures, stories, and real conversations.",
-          footer_nav_header: "Navigation", footer_legal_header: "Legal & Privacy", footer_contact_header: "Contact", footer_rights: "All rights reserved.", footer_educamax_notice: "Hola Mundo is operated by EducaMax [Razón Social por completar], Chile.",
+          footer_nav_header: "Navigation", footer_legal_header: "Legal & Privacy", footer_contact_header: "Contact", footer_rights: "All rights reserved.", footer_educamax_notice: "Hola Mundo is operated by Educamax Ltda (RUT 77.912.943-8), Chile.",
           legal_privacy_title: "Privacy Policy", legal_terms_title: "Terms & Conditions", legal_cookie_title: "Cookie Policy",
           cookie_title: "We value your privacy 🍪", cookie_text: "We only store your language choice on this device. We don\'t use tracking or advertising cookies.", cookie_accept: "Got it", cookie_essential: "Essential Only", cookie_details: "Privacy Details"
         },
@@ -2152,6 +2275,11 @@
           culture_tag: "EXPLORACIÓN CULTURAL LATINOAMERICANA", sticky_sub: "Clase de prueba gratis", modal_trial_sub: "Únete a una sesión grupal en vivo para conocer el nivel de tu hijo.",
           contact_hours: "Lun – Vie: 08:00 – 20:00 UTC", form_incomplete: "Completa todos los campos obligatorios y acepta la política de privacidad.",
           applicant: "Solicitante:", age_label: "Edad:", country_label: "País:",
+          nav_pricing: "Precio", price_tag: "PRECIO", price_title: "Un solo plan, simple", price_subtitle: "Una suscripción mensual que sirve para cualquiera de nuestros dos programas.", price_name: "Suscripción mensual", price_period: "/ mes",
+          price_feat1: "2 clases en vivo por semana, de 60 minutos cada una", price_feat2: "Grupos pequeños por edad y nivel de español", price_feat3: "Profesores nativos de Latinoamérica", price_feat4: "Informes de progreso periódicos para los padres", price_feat5: "Español como Nuevo Idioma o Español de Herencia",
+          price_cta: "Reserva una clase de prueba gratis", price_note: "La primera clase de prueba es gratis. Después te contamos cómo inscribirte.",
+          class_format: "Clases en vivo: 60 minutos, 2 veces por semana", meta_title: "Hola Mundo | Academia de español online para niños y adolescentes (8-17 años)", meta_description: "Clases de español online y en vivo para niños y adolescentes de 8 a 17 años: grupos pequeños, 60 minutos, 2 veces por semana, con profesores nativos de Latinoamérica. Reserva una clase de prueba gratis.",
+          form_notice: "Educamax Ltda usará estos datos solo para coordinar la clase de prueba. Puedes acceder a ellos, corregirlos o eliminarlos cuando quieras.", form_notice_link: "Ver la Política de Privacidad",
           nav_how_it_works: "Cómo funciona", nav_programs: "Programas", nav_our_approach: "Nuestra metodología", nav_for_parents: "Para padres", nav_faq: "Preguntas frecuentes", nav_book_trial: "Reserva una clase de prueba",
           hero_badge: "✨ Academia de Español Online 100% en Vivo", hero_title_1: "El español se convierte en una ", hero_title_2: "aventura.",
           hero_subtitle: "Clases de español online en vivo para niños y adolescentes de 8 a 17 años. Grupos reducidos, profesores nativos y conversaciones reales.",
@@ -2190,7 +2318,7 @@
           success_close: "Volver al Sitio",
           faq_tag: "¿TIENES DUDAS?", faq_title: "Preguntas Frecuentes", faq_search_ph: "Buscar pregunta...",
           footer_brand_desc: "Academia Online de Español para Niños y Adolescentes. Aprende español a través de aventuras en vivo, historias y conversaciones reales.",
-          footer_nav_header: "Navegación", footer_legal_header: "Legal y Privacidad", footer_contact_header: "Contacto", footer_rights: "Todos los derechos reservados.", footer_educamax_notice: "Hola Mundo es operado por EducaMax [Razón Social por completar], Chile.",
+          footer_nav_header: "Navegación", footer_legal_header: "Legal y Privacidad", footer_contact_header: "Contacto", footer_rights: "Todos los derechos reservados.", footer_educamax_notice: "Hola Mundo es operado por Educamax Ltda (RUT 77.912.943-8), Chile.",
           legal_privacy_title: "Política de Privacidad", legal_terms_title: "Términos y Condiciones", legal_cookie_title: "Política de Cookies",
           cookie_title: "Valoramos tu privacidad 🍪", cookie_text: "Solo guardamos tu elección de idioma en este dispositivo. No usamos cookies de seguimiento ni publicidad.", cookie_accept: "Entendido", cookie_essential: "Solo Esenciales", cookie_details: "Detalles de Privacidad"
         }
@@ -2225,6 +2353,20 @@
           if (o.value) o.textContent = o.value + ' ' + this.translations[lang].years;
         });
 
+        // page title, description, canonical and URL follow the language (?lang=es for Spanish)
+        const tt = this.translations[lang];
+        document.title = tt.meta_title;
+        document.querySelector('meta[name="description"]')?.setAttribute('content', tt.meta_description);
+        document.querySelector('meta[property="og:title"]')?.setAttribute('content', tt.meta_title);
+        document.querySelector('meta[property="og:description"]')?.setAttribute('content', tt.meta_description);
+        try {
+          const url = new URL(window.location.href);
+          if (lang === 'es') url.searchParams.set('lang', 'es'); else url.searchParams.delete('lang');
+          history.replaceState(null, '', url);
+          const canon = document.getElementById('canonicalLink');
+          if (canon && url.protocol.startsWith('http')) canon.href = url.origin + url.pathname + (lang === 'es' ? '?lang=es' : '');
+        } catch (e) {}
+
         // remember the choice on this device
         try { localStorage.setItem('holamundo_lang', lang); } catch (e) {}
 
@@ -2235,6 +2377,10 @@
       },
 
       detectLanguage: function() {
+        try {
+          const fromUrl = new URLSearchParams(window.location.search).get('lang');
+          if (fromUrl && this.translations[fromUrl]) return fromUrl;
+        } catch (e) {}
         let saved = null;
         try { saved = localStorage.getItem('holamundo_lang'); } catch (e) {}
         if (saved && this.translations[saved]) return saved;
@@ -2276,6 +2422,7 @@
         this.setupModals();
         window.HOLA_I18N.setLanguage(window.HOLA_I18N.detectLanguage());
         window.HOLA_COOKIE.init();
+        if (['#privacy', '#privacidad'].includes(window.location.hash)) this.openLegalModal('privacy');
       },
 
       setupNav: function() {
@@ -2309,6 +2456,19 @@
         if (faqInput) {
           faqInput.addEventListener('input', (e) => this.filterFaqs(e.target.value.trim().toLowerCase()));
         }
+      },
+
+      showFormError: function(formElem, message) {
+        let box = formElem.querySelector('.form-error');
+        if (!box) {
+          box = document.createElement('p');
+          box.className = 'form-error';
+          box.setAttribute('role', 'alert');
+          const btn = formElem.querySelector('button[type="submit"]');
+          btn.parentNode.insertBefore(box, btn);
+        }
+        box.textContent = message;
+        box.hidden = !message;
       },
 
       setupModals: function() {
@@ -2487,9 +2647,13 @@
         }
 
         if (!pName || !email || !age || !country || !level || !privacy) {
-          alert(window.HOLA_I18N.translations[lang].form_incomplete);
+          this.showFormError(formElem, window.HOLA_I18N.translations[lang].form_incomplete);
+          const firstEmpty = [...formElem.querySelectorAll('[required]')].find(el => el.type === 'checkbox' ? !el.checked : !el.value.trim());
+          if (firstEmpty) firstEmpty.focus();
           return;
         }
+
+        this.showFormError(formElem, '');
 
         // Show loading state on button
         if (submitBtn) {
@@ -2531,6 +2695,10 @@
           }
         })
         .then(data => {
+          // FormSubmit answers HTTP 200 even when it did NOT deliver (e.g. form not activated yet)
+          if (data && String(data.success) === 'false') {
+            throw new Error(data.message || 'FormSubmit rejected the submission');
+          }
           // Success Response
           formElem.reset();
           this.closeModal('trialModal');
@@ -2611,6 +2779,141 @@
         this.openModal('missionModal');
       },
 
+
+      /* PRIVACY POLICY — drafted under Chile's Ley 21.719 (in force from 1 Dec 2026).
+         Fields in [brackets] must be completed. Have it reviewed by a lawyer before publishing. */
+      privacyPolicyHTML: function(lang) {
+        const L = window.HOLA_CONFIG.LEGAL_ENTITY;
+        const mail = `<a href="mailto:${L.email}" style="color:var(--navy-primary);text-decoration:underline;">${L.email}</a>`;
+        if (lang === 'es') return `
+          <div class="legal-doc">
+            <p class="legal-meta">Versión ${L.policyVersion} · Última actualización: ${L.policyUpdated.es}. Elaborada conforme a la Ley N° 19.628 sobre Protección de la Vida Privada, modificada por la Ley N° 21.719, vigente desde el 1 de diciembre de 2026.</p>
+
+            <h4>1. Responsable del tratamiento</h4>
+            <p><strong>${L.company}</strong>, RUT ${L.rut}, ${L.country}. Hola Mundo es una marca de ${L.company}. Contacto para temas de datos personales: ${mail}.</p>
+
+            <h4>2. Qué datos tratamos</h4>
+            <ul>
+              <li><strong>Del padre, madre o tutor:</strong> nombre, correo electrónico y país de residencia.</li>
+              <li><strong>Del estudiante:</strong> solo su edad y su nivel de español, entregados por el adulto responsable. No pedimos el nombre del niño ni otros datos suyos en el formulario.</li>
+              <li><strong>Opcional:</strong> el motivo por el que quieres que tu hijo aprenda español.</li>
+              <li><strong>En tu navegador:</strong> tu elección de idioma y que ya viste el aviso de cookies. No usamos cookies de seguimiento, analítica ni publicidad.</li>
+            </ul>
+            <p>No tratamos datos sensibles (como salud, origen étnico o datos biométricos). Por favor, no los incluyas en el campo de texto libre.</p>
+
+            <h4>3. Para qué los usamos y con qué base legal</h4>
+            <ul>
+              <li><strong>Coordinar la clase de prueba gratuita</strong> y asignar un grupo según edad y nivel. Base: medidas precontractuales solicitadas por ti y tu consentimiento, que entregas al marcar la casilla del formulario.</li>
+              <li><strong>Responder tus consultas.</strong> Base: tu consentimiento.</li>
+            </ul>
+            <p>No usamos tus datos para publicidad, no los vendemos y no tomamos decisiones automatizadas ni elaboramos perfiles con ellos.</p>
+
+            <h4>4. Datos de niños, niñas y adolescentes</h4>
+            <p>Tratamos los datos de los estudiantes atendiendo a su interés superior y a su autonomía progresiva. El formulario está dirigido exclusivamente a adultos responsables: los datos de niños y niñas menores de 14 años solo se tratan con el consentimiento de su padre, madre, representante legal o quien tenga su cuidado personal. Si detectamos que un menor envió el formulario sin un adulto responsable, eliminaremos sus datos.</p>
+
+            <h4>5. Con quién los compartimos</h4>
+            <p>Solo con proveedores que nos ayudan a operar el sitio, que actúan por encargo nuestro:</p>
+            <ul>
+              <li><strong>FormSubmit</strong> (formsubmit.co), que recibe el formulario y lo reenvía a nuestro correo.</li>
+              <li><strong>Google</strong> (Gmail), donde recibimos y guardamos las solicitudes.</li>
+            </ul>
+            <p>No compartimos tus datos con otros terceros, salvo obligación legal o requerimiento de autoridad competente.</p>
+
+            <h4>6. Transferencias internacionales</h4>
+            <p>Estos proveedores pueden almacenar o procesar los datos en servidores fuera de Chile, incluido Estados Unidos. Elegimos proveedores con medidas de seguridad reconocidas y limitamos los datos que les enviamos a lo estrictamente necesario.</p>
+
+            <h4>7. Cuánto tiempo los guardamos</h4>
+            <p>Si no se concreta una inscripción, eliminamos tus datos dentro de ${L.retentionMonths} meses desde tu solicitud, o antes si nos lo pides. Si inscribes a tu hijo, los conservaremos mientras dure la relación y por los plazos que exija la ley.</p>
+
+            <h4>8. Tus derechos</h4>
+            <p>Puedes ejercer en cualquier momento, de forma gratuita, tus derechos de:</p>
+            <ul>
+              <li><strong>Acceso:</strong> saber qué datos tenemos, de dónde vienen, para qué los usamos y con quién los compartimos.</li>
+              <li><strong>Rectificación:</strong> corregir datos inexactos o incompletos.</li>
+              <li><strong>Supresión:</strong> pedir que eliminemos tus datos.</li>
+              <li><strong>Oposición:</strong> oponerte a un tratamiento determinado.</li>
+              <li><strong>Portabilidad:</strong> recibir tus datos en un formato electrónico estructurado.</li>
+              <li><strong>Bloqueo:</strong> suspender temporalmente el tratamiento mientras se resuelve otra solicitud.</li>
+              <li><strong>Retirar tu consentimiento</strong>, sin expresión de causa y con la misma facilidad con que lo diste.</li>
+            </ul>
+            <p>Para ejercerlos, escríbenos a ${mail} indicando tu nombre, el derecho que quieres ejercer y el correo con que enviaste el formulario. Responderemos dentro de 30 días corridos, prorrogables una vez por igual plazo si es necesario; las solicitudes de bloqueo se atienden en 2 días hábiles.</p>
+            <p>Si no quedas conforme con nuestra respuesta, puedes reclamar ante la <strong>Agencia de Protección de Datos Personales</strong> de Chile.</p>
+
+            <h4>9. Seguridad</h4>
+            <p>El sitio usa conexión cifrada (HTTPS), el acceso al correo donde se reciben las solicitudes está restringido al equipo de ${L.company} y protegido con verificación en dos pasos. Si ocurriera una vulneración de seguridad que ponga en riesgo tus datos, lo informaremos a la Agencia y, cuando corresponda, a ti, sin dilaciones indebidas.</p>
+
+            <h4>10. Familias fuera de Chile</h4>
+            <p>Si vives en otro país, también pueden aplicarte las leyes de protección de datos de tu país de residencia (por ejemplo, el RGPD en la Unión Europea o la LPD en Suiza). Puedes ejercer los mismos derechos escribiendo a ${mail}.</p>
+
+            <h4>11. Cambios a esta política</h4>
+            <p>Si modificamos esta política, publicaremos la nueva versión en este sitio con su fecha de actualización.</p>
+          </div>`;
+
+        return `
+          <div class="legal-doc">
+            <p class="legal-meta">Version ${L.policyVersion} · Last updated: ${L.policyUpdated.en}. Prepared under Chilean Law No. 19,628 on the Protection of Private Life, as amended by Law No. 21,719, in force from December 1, 2026. The Spanish version prevails.</p>
+
+            <h4>1. Data controller</h4>
+            <p><strong>${L.company}</strong>, tax ID (RUT) ${L.rut}, ${L.country}. Hola Mundo is a brand of ${L.company}. Contact for personal data matters: ${mail}.</p>
+
+            <h4>2. What data we process</h4>
+            <ul>
+              <li><strong>Parent or guardian:</strong> name, email address and country of residence.</li>
+              <li><strong>Student:</strong> only their age and Spanish level, provided by the responsible adult. The form does not ask for the child's name or any other data about them.</li>
+              <li><strong>Optional:</strong> why you'd like your child to learn Spanish.</li>
+              <li><strong>In your browser:</strong> your language choice and that you've seen the cookie notice. We don't use tracking, analytics or advertising cookies.</li>
+            </ul>
+            <p>We don't process sensitive data (such as health, ethnic origin or biometric data). Please don't include it in the free-text field.</p>
+
+            <h4>3. Why we use it and on what legal basis</h4>
+            <ul>
+              <li><strong>To arrange the free trial class</strong> and place the student in a group by age and level. Basis: pre-contractual steps you requested and your consent, given by ticking the form's checkbox.</li>
+              <li><strong>To answer your questions.</strong> Basis: your consent.</li>
+            </ul>
+            <p>We don't use your data for advertising, we don't sell it, and we don't make automated decisions or build profiles with it.</p>
+
+            <h4>4. Children's and adolescents' data</h4>
+            <p>We process students' data in their best interest and with respect for their evolving autonomy. The form is meant only for responsible adults: data of children under 14 is processed only with the consent of their parent, legal representative or caregiver. If we find that a minor sent the form without a responsible adult, we will delete the data.</p>
+
+            <h4>5. Who we share it with</h4>
+            <p>Only with service providers that help us run the site and act on our behalf:</p>
+            <ul>
+              <li><strong>FormSubmit</strong> (formsubmit.co), which receives the form and forwards it to our email.</li>
+              <li><strong>Google</strong> (Gmail), where we receive and store requests.</li>
+            </ul>
+            <p>We don't share your data with any other third party unless required by law or by a competent authority.</p>
+
+            <h4>6. International transfers</h4>
+            <p>These providers may store or process data on servers outside Chile, including in the United States. We choose providers with recognized security measures and send them only the data strictly needed.</p>
+
+            <h4>7. How long we keep it</h4>
+            <p>If no enrollment follows, we delete your data within ${L.retentionMonths} months of your request, or sooner if you ask. If you enroll your child, we keep it for the duration of the relationship and for any period required by law.</p>
+
+            <h4>8. Your rights</h4>
+            <p>At any time and free of charge, you can exercise your rights of:</p>
+            <ul>
+              <li><strong>Access:</strong> know what data we hold, where it came from, why we use it and who we share it with.</li>
+              <li><strong>Rectification:</strong> correct inaccurate or incomplete data.</li>
+              <li><strong>Erasure:</strong> ask us to delete your data.</li>
+              <li><strong>Objection:</strong> object to a specific use.</li>
+              <li><strong>Portability:</strong> receive your data in a structured electronic format.</li>
+              <li><strong>Blocking:</strong> temporarily suspend processing while another request is resolved.</li>
+              <li><strong>Withdraw consent</strong>, without giving a reason and as easily as you gave it.</li>
+            </ul>
+            <p>To exercise them, email ${mail} with your name, the right you want to exercise and the email address you used in the form. We will reply within 30 calendar days, extendable once by the same period if needed; blocking requests are handled within 2 business days.</p>
+            <p>If you're not satisfied with our answer, you can file a complaint with Chile's <strong>Personal Data Protection Agency</strong> (Agencia de Protección de Datos Personales).</p>
+
+            <h4>9. Security</h4>
+            <p>The site uses an encrypted connection (HTTPS), and access to the mailbox that receives requests is restricted to the ${L.company} team and protected with two-step verification. If a security breach puts your data at risk, we will notify the Agency and, where applicable, you, without undue delay.</p>
+
+            <h4>10. Families outside Chile</h4>
+            <p>If you live in another country, the data protection laws of your country of residence may also apply (for example, the GDPR in the European Union or the FADP in Switzerland). You can exercise the same rights by writing to ${mail}.</p>
+
+            <h4>11. Changes to this policy</h4>
+            <p>If we change this policy, we will publish the new version on this site with its update date.</p>
+          </div>`;
+      },
+
       openLegalModal: function(docType) {
         const lang = window.HOLA_I18N.currentLang;
         const title = document.getElementById('legalModalTitle');
@@ -2622,25 +2925,7 @@
 
         if (docType === 'privacy') {
           title.textContent = window.HOLA_I18N.translations[lang].legal_privacy_title;
-          body.innerHTML = wrap(es ? `
-              <p style="margin-bottom:0.75rem;"><strong>Aviso de privacidad y protección de datos</strong></p>
-              <p style="margin-bottom:0.75rem;">Hola Mundo es operado por <strong>${legal.company}</strong> (${legal.country}). Proteger la privacidad de los menores y sus familias es nuestra prioridad.</p>
-              <ul style="padding-left:1.25rem;margin-bottom:0.75rem;">
-                <li>Los formularios de inscripción están dirigidos exclusivamente a padres, madres o tutores legales adultos.</li>
-                <li>No recopilamos datos personales innecesarios de menores.</li>
-                <li>Los datos enviados se usan únicamente para coordinar la clase de prueba.</li>
-              </ul>
-              <p style="font-size:0.8rem;color:var(--text-subtle);">* Correo de contacto: ${legal.email}</p>
-            ` : `
-              <p style="margin-bottom:0.75rem;"><strong>Privacy & Data Protection Notice</strong></p>
-              <p style="margin-bottom:0.75rem;">Hola Mundo is operated by <strong>${legal.company}</strong> (${legal.country}). Protecting minor and family privacy is our highest priority.</p>
-              <ul style="padding-left:1.25rem;margin-bottom:0.75rem;">
-                <li>Public registration forms are strictly directed to adult parents or legal guardians.</li>
-                <li>We do not collect unnecessary personal data from minors.</li>
-                <li>Data submitted is strictly used for trial class placement scheduling.</li>
-              </ul>
-              <p style="font-size:0.8rem;color:var(--text-subtle);">* Contact email: ${legal.email}</p>
-            `);
+          body.innerHTML = this.privacyPolicyHTML(lang);
         } else if (docType === 'terms') {
           title.textContent = window.HOLA_I18N.translations[lang].legal_terms_title;
           body.innerHTML = wrap(es ? `
