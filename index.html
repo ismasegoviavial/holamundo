@@ -1269,6 +1269,26 @@
       *, *::before, *::after { transition: none !important; animation: none !important; }
     }
 
+    /* ===== FIXES: collapse the menu before it runs out of room (tablets, small laptops) ===== */
+    @media (max-width: 1180px) {
+      .nav-menu {
+        position: fixed;
+        top: var(--header-height);
+        left: 0; right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 2rem;
+        border-bottom: 1px solid var(--border-light);
+        box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+        transform: translateY(-120%);
+        transition: var(--transition-smooth);
+        opacity: 0;
+        pointer-events: none;
+      }
+      .nav-menu.active { transform: translateY(0); opacity: 1; pointer-events: auto; }
+      .mobile-toggle { display: flex; }
+    }
+
     /* ===== FIXES: tablet & mobile layout ===== */
     @media (max-width: 1024px) {
       .hero-grid, .approach-grid, .lead-banner-grid, .parent-grid, .paths-grid, .age-cards-grid {
