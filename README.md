@@ -2,8 +2,8 @@
 
 Sitio web de **Hola Mundo**, academia de español online y en vivo para estudiantes de 8 a 17 años, operada por **Educamax Ltda** (RUT 77.912.943-8), Chile.
 
-**Sitio publicado:** https://ismasegoviavial.github.io/holamundo/
-**Versión en español:** https://ismasegoviavial.github.io/holamundo/?lang=es
+**Sitio publicado:** https://holamundoacademy.com/
+**Versión en español:** https://holamundoacademy.com/?lang=es
 
 ## Archivos
 
@@ -26,11 +26,11 @@ Todo está dentro de `index.html`, en la parte de `<script>` al final del archiv
 
 ## Formulario de clase de prueba
 
-Las solicitudes se envían con [FormSubmit](https://formsubmit.co/) a `educamaxcl@gmail.com`. El formulario ya está activado. Si se cambia el correo de destino o el sitio pasa a un dominio propio, puede que FormSubmit pida confirmar de nuevo por correo.
+Las solicitudes se envían con [FormSubmit](https://formsubmit.co/) a `educamaxcl@gmail.com`. El formulario ya está activado y funciona desde `holamundoacademy.com`. Si se cambia el correo de destino, FormSubmit pedirá confirmarlo de nuevo por correo.
 
 ## Publicar cambios
 
-El sitio se publica automáticamente con **GitHub Pages** desde la rama `main` (carpeta raíz). Después de editar:
+El sitio se publica automáticamente en **Vercel** (dominio `holamundoacademy.com`) cada vez que se suben cambios a la rama `main`. Después de editar:
 
 ```
 git add .
@@ -45,4 +45,4 @@ El sitio se actualiza en 1–2 minutos.
 - Revisión legal de la política de privacidad (Ley 21.719, vigente desde el 1 de diciembre de 2026).
 - Horarios y tamaño máximo de los grupos.
 - Fotos propias en lugar de las de Unsplash, y profesores con nombre y foto.
-- Registrar el sitio en Google Search Console y enviar `sitemap.xml`.
+- Registrar `holamundoacademy.com` en Google Search Console y enviar `https://holamundoacademy.com/sitemap.xml`.
